@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/chris/opencity/src/conf.cpp</file>
+            <file>file:/home/chris/opencity/src/extensionmanager.cpp</file>
+            <file>file:/home/chris/opencity/src/renderer.cpp</file>
+            <file>file:/home/chris/opencity/src/mapgen/mapmaker.h</file>
+            <file>file:/home/chris/opencity/src/conf.h</file>
+            <file>file:/home/chris/opencity/src/destination.cpp</file>
+            <file>file:/home/chris/opencity/src/city.cpp</file>
+            <file>file:/home/chris/opencity/src/guibar.cpp</file>
+            <file>file:/home/chris/opencity/src/structure/treestructure.cpp</file>
+            <file>file:/home/chris/opencity/src/simulator/mainsim.cpp</file>
+            <file>file:/home/chris/opencity/src/audiomanagersdl.cpp</file>
+            <file>file:/home/chris/opencity/config/opencity.xml</file>
+            <file>file:/home/chris/opencity/nbproject/private/Default-build.log</file>
+            <file>file:/home/chris/opencity/src/framework/System/Xml/CXmlDocument.h</file>
+            <file>file:/home/chris/opencity/src/mapgen/map.cpp</file>
+            <file>file:/home/chris/opencity/src/guibutton.cpp</file>
+            <file>file:/home/chris/opencity/src/guimain.cpp</file>
+            <file>file:/home/chris/opencity/src/guicontainer.cpp</file>
+            <file>file:/home/chris/opencity/nbproject/private/configurations.xml</file>
+            <file>file:/home/chris/opencity/src/globalvar.h</file>
+            <file>file:/home/chris/opencity/src/texture.cpp</file>
+            <file>file:/home/chris/opencity/src/framework/System/Windows/Forms/AButtonBase.cpp</file>
+            <file>file:/home/chris/opencity/src/enum.h</file>
+            <file>file:/home/chris/opencity/src/zen.cpp</file>
+            <file>file:/home/chris/opencity/src/mapgen/mapmaker.cpp</file>
+            <file>file:/home/chris/opencity/src/guibutton.h</file>
+            <file>file:/home/chris/opencity/nbproject/configurations.xml</file>
+            <file>file:/home/chris/opencity/src/structure/treestructure.h</file>
+            <file>file:/home/chris/opencity/src/main.cpp</file>
+            <file>file:/home/chris/opencity/src/framework/System/Windows/Forms/CForm.h</file>
+            <file>file:/home/chris/opencity/src/structure/wegstructure.cpp</file>
+            <file>file:/home/chris/opencity/src/simulator/simulator.h</file>
+            <file>file:/home/chris/opencity/src/layer.cpp</file>
+            <file>file:/home/chris/opencity/src/SimpleOpt.h</file>
+            <file>file:/home/chris/opencity/src/city.h</file>
+            <file>file:/home/chris/opencity/src/buildinglayer.cpp</file>
+            <file>file:/home/chris/opencity/src/model/ac3dmacros.h</file>
+            <file>file:/home/chris/opencity/docs/devel/CodingStyle.h</file>
+            <file>file:/home/chris/opencity/config/graphism.xml</file>
+            <file>file:/home/chris/opencity/config/graphism.conf</file>
+            <file>file:/home/chris/opencity/src/simulator/electricitysim.cpp</file>
+            <file>file:/home/chris/opencity/src/graphicmanager.cpp</file>
+            <file>file:/home/chris/opencity/src/propertymanager.cpp</file>
+        </group>
+    </open-files>
+</project-private>

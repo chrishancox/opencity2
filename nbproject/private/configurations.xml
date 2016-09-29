@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="autom4te.cache">
+      </df>
+      <df name="autopackage">
+      </df>
+      <df name="config">
+      </df>
+      <df name="docs">
+        <df name="devel">
+          <df name="specification">
+          </df>
+          <df name="UML">
+          </df>
+          <in>CodingStyle.cpp</in>
+          <in>CodingStyle.h</in>
+        </df>
+      </df>
+      <df name="graphism">
+        <df name="commercial">
+          <df name="c_zone">
+          </df>
+          <df name="chez-bob">
+          </df>
+          <df name="hotel">
+          </df>
+          <df name="icarus">
+          </df>
+          <df name="market">
+          </df>
+          <df name="resto">
+          </df>
+          <df name="rusk">
+          </df>
+          <df name="station-p">
+          </df>
+          <df name="store">
+          </df>
+          <df name="timberdland-hotel">
+          </df>
+        </df>
+        <df name="educationdept">
+          <df name="school-medium">
+          </df>
+        </df>
+        <df name="electricity">
+          <df name="coal">
+          </df>
+          <df name="line_n_e">
+          </df>
+          <df name="line_n_w">
+          </df>
+          <df name="line_n_w_e">
+          </df>
+          <df name="line_o_e">
+          </df>
+          <df name="line_o_n">
+          </df>
+          <df name="line_o_s">
+          </df>
+          <df name="line_o_w">
+          </df>
+          <df name="line_s_e">
+          </df>
+          <df name="line_s_n">
+          </df>
+          <df name="line_s_n_e">
+          </df>
+          <df name="line_s_n_w">
+          </df>
+          <df name="line_s_n_w_e">
+          </df>
+          <df name="line_s_w">
+          </df>
+          <df name="line_s_w_e">
+          </df>
+          <df name="line_w_e">
+          </df>
+          <df name="nuclear">
+          </df>
+          <df name="oil">
+          </df>
+          <df name="wind">
+          </df>
+        </df>
+        <df name="firedept">
+          <df name="medium">
+          </df>
+        </df>
+        <df name="gui">
+          <df name="status">
+          </df>
+        </df>
+        <df name="hospitaldept">
+          <df name="large">
+          </df>
+        </df>
+        <df name="icon">
+        </df>
+        <df name="industrial">
+          <df name="aeronautics-study">
+          </df>
+          <df name="beef">
+          </df>
+          <df name="containers">
+          </df>
+          <df name="hang">
+          </df>
+          <df name="i_zone">
+          </df>
+          <df name="steel">
+          </df>
+          <df name="tank">
+          </df>
+          <df name="warehouse">
+          </df>
+          <df name="waste_ground">
+          </df>
+        </df>
+        <df name="park">
+          <df name="city">
+          </df>
+        </df>
+        <df name="path">
+          <df name="road">
+            <df name="road_n_e">
+            </df>
+            <df name="road_n_w">
+            </df>
+            <df name="road_n_w_e">
+            </df>
+            <df name="road_o_e">
+            </df>
+            <df name="road_o_n">
+            </df>
+            <df name="road_o_s">
+            </df>
+            <df name="road_o_w">
+            </df>
+            <df name="road_s_e">
+            </df>
+            <df name="road_s_n">
+            </df>
+            <df name="road_s_n_e">
+            </df>
+            <df name="road_s_n_w">
+            </df>
+            <df name="road_s_n_w_e">
+            </df>
+            <df name="road_s_w">
+            </df>
+            <df name="road_s_w_e">
+            </df>
+            <df name="road_w_e">
+            </df>
+          </df>
+        </df>
+        <df name="policedept">
+          <df name="medium">
+          </df>
+        </df>
+        <df name="residential">
+          <df name="alexandria">
+          </df>
+          <df name="charmilles">
+          </df>
+          <df name="easybuilding">
+          </df>
+          <df name="family">
+          </df>
+          <df name="grand-father">
+          </df>
+          <df name="light-of-star">
+          </df>
+          <df name="little_house">
+          </df>
+          <df name="mep">
+          </df>
+          <df name="r_zone">
+          </df>
+          <df name="viny-world">
+          </df>
+        </df>
+        <df name="texture">
+        </df>
+        <df name="tree">
+          <df name="fir1">
+          </df>
+          <df name="peking-willow1">
+          </df>
+          <df name="pine2">
+          </df>
+          <df name="pine3">
+          </df>
+          <df name="tree007">
+          </df>
+        </df>
+        <df name="vehicle">
+          <df name="buickS">
+          </df>
+          <df name="clior">
+          </df>
+          <df name="fire">
+          </df>
+          <df name="police">
+          </df>
+          <df name="renault8-sport">
+          </df>
+          <df name="truck">
+          </df>
+        </df>
+      </df>
+      <df name="linux">
+        <in>config.h</in>
+      </df>
+      <df name="m4">
+      </df>
+      <df name="map">
+        <df name="heightmap">
+        </df>
+      </df>
+      <df name="sound">
+      </df>
+      <df name="src">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <df name="binreloc">
+          <df name=".deps">
+          </df>
+          <in>binreloc.c</in>
+          <in>binreloc.h</in>
+        </df>
+        <df name="enum">
+          <in>opencity_direction.h</in>
+          <in>opencity_structure_type.h</in>
+        </df>
+        <df name="framework">
+          <df name=".libs">
+          </df>
+          <df name="System">
+            <df name=".deps">
+            </df>
+            <df name=".libs">
+            </df>
+            <df name="Collections">
+              <df name="Generic">
+                <in>CArray.h</in>
+                <in>CArray.tcc</in>
+                <in>CLinkedList.h</in>
+                <in>CLinkedList.tcc</in>
+                <in>CList.h</in>
+                <in>CList.tcc</in>
+              </df>
+            </df>
+            <df name="ComponentModel">
+              <in>CComponent.cpp</in>
+              <in>CComponent.h</in>
+              <in>IComponent.h</in>
+            </df>
+            <df name="Diagnostics">
+              <in>CDebug.cpp</in>
+              <in>CDebug.h</in>
+            </df>
+            <df name="Globalization">
+              <in>CCultureInfo.cpp</in>
+              <in>CCultureInfo.h</in>
+            </df>
+            <df name="Information">
+              <df name=".libs">
+              </df>
+              <df name="Software">
+                <df name=".deps">
+                </df>
+                <df name=".libs">
+                </df>
+                <in>CSdl.cpp</in>
+                <in>CSdl.h</in>
+              </df>
+            </df>
+            <df name="IO">
+              <in>CFileStream.cpp</in>
+              <in>CFileStream.h</in>
+              <in>CStream.cpp</in>
+              <in>CStream.h</in>
+            </df>
+            <df name="Reflection">
+              <df name=".deps">
+              </df>
+              <df name=".libs">
+              </df>
+              <in>CMemberInfo.cpp</in>
+              <in>CMemberInfo.h</in>
+            </df>
+            <df name="Windows">
+              <df name="Forms">
+                <in>AButtonBase.cpp</in>
+                <in>AButtonBase.h</in>
+                <in>AListControl.cpp</in>
+                <in>AListControl.h</in>
+                <in>CButton.cpp</in>
+                <in>CButton.h</in>
+                <in>CCheckBox.cpp</in>
+                <in>CCheckBox.h</in>
+                <in>CComboBox.cpp</in>
+                <in>CComboBox.h</in>
+                <in>CContainerControl.cpp</in>
+                <in>CContainerControl.h</in>
+                <in>CControl.cpp</in>
+                <in>CControl.h</in>
+                <in>CForm.cpp</in>
+                <in>CForm.h</in>
+                <in>CLabel.cpp</in>
+                <in>CLabel.h</in>
+                <in>CListBox.cpp</in>
+                <in>CListBox.h</in>
+                <in>CRadioButton.cpp</in>
+                <in>CRadioButton.h</in>
+                <in>CScrollableControl.cpp</in>
+                <in>CScrollableControl.h</in>
+                <in>IContainerControl.h</in>
+              </df>
+            </df>
+            <df name="Xml">
+              <in>CXmlDocument.cpp</in>
+              <in>CXmlDocument.h</in>
+              <in>CXmlElement.cpp</in>
+              <in>CXmlElement.h</in>
+              <in>CXmlLinkedNode.cpp</in>
+              <in>CXmlLinkedNode.h</in>
+              <in>CXmlNode.cpp</in>
+              <in>CXmlNode.h</in>
+              <in>CXmlNodeList.cpp</in>
+              <in>CXmlNodeList.h</in>
+            </df>
+            <in>AApplication.cpp</in>
+            <in>AApplication.h</in>
+            <in>ADelegate.cpp</in>
+            <in>ADelegate.h</in>
+            <in>AMarshalByRefObject.cpp</in>
+            <in>AMarshalByRefObject.h</in>
+            <in>AMulticastDelegate.cpp</in>
+            <in>AMulticastDelegate.h</in>
+            <in>AValueType.cpp</in>
+            <in>AValueType.h</in>
+            <in>CBoolean.cpp</in>
+            <in>CBoolean.h</in>
+            <in>CConsole.cpp</in>
+            <in>CConsole.h</in>
+            <in>CEnum.cpp</in>
+            <in>CEnum.h</in>
+            <in>CException.cpp</in>
+            <in>CException.h</in>
+            <in>CIntPtr.cpp</in>
+            <in>CIntPtr.h</in>
+            <in>CNotImplementedException.cpp</in>
+            <in>CNotImplementedException.h</in>
+            <in>CNotSupportedException.cpp</in>
+            <in>CNotSupportedException.h</in>
+            <in>CNullValue.cpp</in>
+            <in>CNullValue.h</in>
+            <in>CObject.cpp</in>
+            <in>CObject.h</in>
+            <in>CSmartPointer.h</in>
+            <in>CSmartPointer.tcc</in>
+            <in>CString.cpp</in>
+            <in>CString.h</in>
+            <in>CStringSplitOptions.cpp</in>
+            <in>CStringSplitOptions.h</in>
+            <in>CSystemException.cpp</in>
+            <in>CSystemException.h</in>
+            <in>CType.cpp</in>
+            <in>CType.h</in>
+            <in>ICloneable.h</in>
+            <in>IDisposable.h</in>
+            <in>IFormatProvider.h</in>
+          </df>
+          <df name="UnitTesting">
+            <in>AAssert.cpp</in>
+            <in>AAssert.h</in>
+            <in>ATestClass.cpp</in>
+            <in>ATestClass.h</in>
+            <in>ATestRunner.cpp</in>
+            <in>ATestRunner.h</in>
+            <in>CAssertFailedException.cpp</in>
+            <in>CAssertFailedException.h</in>
+            <in>CConsoleTestRunner.cpp</in>
+            <in>CConsoleTestRunner.h</in>
+            <in>CTestContext.cpp</in>
+            <in>CTestContext.h</in>
+            <in>CTestMethod.cpp</in>
+            <in>CTestMethod.h</in>
+            <in>CTestResult.cpp</in>
+            <in>CTestResult.h</in>
+            <in>CUnitTestAssertException.cpp</in>
+            <in>CUnitTestAssertException.h</in>
+          </df>
+          <in>SharpPlus.h</in>
+        </df>
+        <df name="mapgen">
+          <df name=".deps">
+          </df>
+          <df name="filter">
+            <df name=".deps">
+            </df>
+            <in>choper.cpp</in>
+            <in>choper.h</in>
+            <in>context.cpp</in>
+            <in>context.h</in>
+            <in>contextOnlyPositive.cpp</in>
+            <in>contextOnlyPositive.h</in>
+            <in>contextualizer.cpp</in>
+            <in>contextualizer.h</in>
+            <in>cutter.cpp</in>
+            <in>cutter.h</in>
+            <in>filter.cpp</in>
+            <in>filter.h</in>
+            <in>flattern.cpp</in>
+            <in>flattern.h</in>
+            <in>gaussblur.cpp</in>
+            <in>gaussblur.h</in>
+            <in>normalize.cpp</in>
+            <in>normalize.h</in>
+            <in>shape.cpp</in>
+            <in>shape.h</in>
+            <in>shapeBubble.cpp</in>
+            <in>shapeBubble.h</in>
+            <in>shapeTopRound.cpp</in>
+            <in>shapeTopRound.h</in>
+            <in>shapeVolcano.cpp</in>
+            <in>shapeVolcano.h</in>
+            <in>shaper.cpp</in>
+            <in>shaper.h</in>
+          </df>
+          <df name="generator">
+            <df name=".deps">
+            </df>
+            <in>diamon.cpp</in>
+            <in>diamon.h</in>
+            <in>generator.cpp</in>
+            <in>generator.h</in>
+            <in>heightMap.cpp</in>
+            <in>heightMap.h</in>
+          </df>
+          <in>map.cpp</in>
+          <in>map.h</in>
+          <in>mapmaker.cpp</in>
+          <in>mapmaker.h</in>
+        </df>
+        <df name="mas">
+          <df name=".deps">
+          </df>
+          <in>agent.cpp</in>
+          <in>agent.h</in>
+          <in>agentdemonstrator.cpp</in>
+          <in>agentdemonstrator.h</in>
+          <in>agentpolice.cpp</in>
+          <in>agentpolice.h</in>
+          <in>agentposition.h</in>
+          <in>agentrobber.cpp</in>
+          <in>agentrobber.h</in>
+          <in>any.cpp</in>
+          <in>any.h</in>
+          <in>environment.cpp</in>
+          <in>environment.h</in>
+          <in>kernel.cpp</in>
+          <in>kernel.h</in>
+          <in>message.cpp</in>
+          <in>message.h</in>
+          <in>role.h</in>
+        </df>
+        <df name="model">
+          <df name=".deps">
+          </df>
+          <in>ac3dmacros.h</in>
+          <in>ac3dmaterial.cpp</in>
+          <in>ac3dmaterial.h</in>
+          <in>ac3dmodel.cpp</in>
+          <in>ac3dmodel.h</in>
+          <in>ac3dobject.cpp</in>
+          <in>ac3dobject.h</in>
+          <in>ac3dsurface.cpp</in>
+          <in>ac3dsurface.h</in>
+          <in>model.cpp</in>
+          <in>model.h</in>
+          <in>modelloader.cpp</in>
+          <in>modelloader.h</in>
+        </df>
+        <df name="networking">
+          <df name=".deps">
+          </df>
+          <in>netnode.h</in>
+          <in>networking.cpp</in>
+          <in>networking.h</in>
+        </df>
+        <df name="pngfuncs">
+          <df name=".deps">
+          </df>
+          <in>pngfuncs.c</in>
+          <in>pngfuncs.h</in>
+        </df>
+        <df name="simulator">
+          <df name=".deps">
+          </df>
+          <in>commercialsim.cpp</in>
+          <in>commercialsim.h</in>
+          <in>electricitysim.cpp</in>
+          <in>electricitysim.h</in>
+          <in>industrialsim.cpp</in>
+          <in>industrialsim.h</in>
+          <in>mainsim.cpp</in>
+          <in>mainsim.h</in>
+          <in>residentialsim.cpp</in>
+          <in>residentialsim.h</in>
+          <in>simulator.cpp</in>
+          <in>simulator.h</in>
+          <in>trafficsim.cpp</in>
+          <in>trafficsim.h</in>
+        </df>
+        <df name="structure">
+          <df name=".deps">
+          </df>
+          <in>pathstructure.cpp</in>
+          <in>pathstructure.h</in>
+          <in>rcistructure.cpp</in>
+          <in>rcistructure.h</in>
+          <in>structure.cpp</in>
+          <in>structure.h</in>
+          <in>treestructure.cpp</in>
+          <in>treestructure.h</in>
+          <in>wegstructure.cpp</in>
+          <in>wegstructure.h</in>
+        </df>
+        <df name="tinyxml">
+          <df name=".deps">
+          </df>
+          <in>tinystr.cpp</in>
+          <in>tinystr.h</in>
+          <in>tinyxml.cpp</in>
+          <in>tinyxml.h</in>
+          <in>tinyxmlerror.cpp</in>
+          <in>tinyxmlparser.cpp</in>
+        </df>
+        <df name="tinyxpath">
+          <df name=".deps">
+          </df>
+          <in>action_store.cpp</in>
+          <in>action_store.h</in>
+          <in>byte_stream.h</in>
+          <in>lex_token.h</in>
+          <in>lex_util.cpp</in>
+          <in>lex_util.h</in>
+          <in>node_set.cpp</in>
+          <in>node_set.h</in>
+          <in>tinyxpath_conf.h</in>
+          <in>tokenlist.cpp</in>
+          <in>tokenlist.h</in>
+          <in>xml_util.cpp</in>
+          <in>xml_util.h</in>
+          <in>xpath_expression.cpp</in>
+          <in>xpath_expression.h</in>
+          <in>xpath_processor.cpp</in>
+          <in>xpath_processor.h</in>
+          <in>xpath_stack.cpp</in>
+          <in>xpath_stack.h</in>
+          <in>xpath_static.cpp</in>
+          <in>xpath_static.h</in>
+          <in>xpath_stream.cpp</in>
+          <in>xpath_stream.h</in>
+          <in>xpath_syntax.cpp</in>
+          <in>xpath_syntax.h</in>
+        </df>
+        <df name="triangulation">
+          <df name=".deps">
+          </df>
+          <in>geometry.h</in>
+          <in>star.cpp</in>
+          <in>star.h</in>
+          <in>triangulation.h</in>
+        </df>
+        <in>SimpleOpt.h</in>
+        <in>audiomanager.cpp</in>
+        <in>audiomanager.h</in>
+        <in>audiomanagersdl.cpp</in>
+        <in>audiomanagersdl.h</in>
+        <in>buildinglayer.cpp</in>
+        <in>buildinglayer.h</in>
+        <in>city.cpp</in>
+        <in>city.h</in>
+        <in>conf.cpp</in>
+        <in>conf.h</in>
+        <in>destination.cpp</in>
+        <in>destination.h</in>
+        <in>enum.h</in>
+        <in>extensionmanager.cpp</in>
+        <in>extensionmanager.h</in>
+        <in>font_8x8.h</in>
+        <in>globalvar.cpp</in>
+        <in>globalvar.h</in>
+        <in>graphicmanager.cpp</in>
+        <in>graphicmanager.h</in>
+        <in>gui3dview.cpp</in>
+        <in>gui3dview.h</in>
+        <in>guibar.cpp</in>
+        <in>guibar.h</in>
+        <in>guibutton.cpp</in>
+        <in>guibutton.h</in>
+        <in>guicontainer.cpp</in>
+        <in>guicontainer.h</in>
+        <in>guilabel.cpp</in>
+        <in>guilabel.h</in>
+        <in>guimain.cpp</in>
+        <in>guimain.h</in>
+        <in>layer.cpp</in>
+        <in>layer.h</in>
+        <in>macros.h</in>
+        <in>main.cpp</in>
+        <in>main.h</in>
+        <in>map.cpp</in>
+        <in>map.h</in>
+        <in>movement.cpp</in>
+        <in>movement.h</in>
+        <in>movementmanager.cpp</in>
+        <in>movementmanager.h</in>
+        <in>pathfinder.cpp</in>
+        <in>pathfinder.h</in>
+        <in>persistence.cpp</in>
+        <in>persistence.h</in>
+        <in>property.cpp</in>
+        <in>property.h</in>
+        <in>propertymanager.cpp</in>
+        <in>propertymanager.h</in>
+        <in>propertymanager2.cpp</in>
+        <in>propertymanager2.h</in>
+        <in>renderer.cpp</in>
+        <in>renderer.h</in>
+        <in>texture.cpp</in>
+        <in>texture.h</in>
+        <in>ui.cpp</in>
+        <in>ui.h</in>
+        <in>vehicle.cpp</in>
+        <in>vehicle.h</in>
+        <in>zen.cpp</in>
+        <in>zen.h</in>
+      </df>
+      <df name="test">
+        <df name="framework">
+          <df name="System">
+            <df name="Diagnostics">
+            </df>
+            <df name="Xml">
+            </df>
+            <in>CBooleanTest.cpp</in>
+            <in>CBooleanTest.h</in>
+            <in>CStringTest.cpp</in>
+            <in>CStringTest.h</in>
+          </df>
+          <in>main.cpp</in>
+          <in>main.h</in>
+        </df>
+      </df>
+      <df name="viewer">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>viewer.cpp</in>
+      </df>
+      <df name="win32">
+        <df name="docs">
+        </df>
+        <in>config.h</in>
+      </df>
+      <in>config.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

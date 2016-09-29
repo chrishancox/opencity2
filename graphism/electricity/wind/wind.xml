@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:oc:object http://www.opencity.info/xml/object.xsd' xmlns='urn:oc:object'>
+  <property radius='7' worker='10' type='e'>
+    <cost build='500' destroy='100' support='100'/>
+    <r>
+      <need/>
+      <provide max='0' min='0'/>
+    </r>
+    <c>
+      <need/>
+      <provide max='0' min='0'/>
+    </c>
+    <i>
+      <need/>
+      <provide max='0' min='0'/>
+    </i>
+    <t>
+      <need/>
+      <provide max='0' min='0'/>
+    </t>
+    <w>
+      <need max='0'/>
+      <provide/>
+    </w>
+    <e>
+      <need/>
+      <provide max='20'/>
+    </e>
+    <g>
+      <need/>
+      <provide/>
+    </g>
+    <nature>
+      <need/>
+      <provide max='0'/>
+    </nature>
+    <direction value='os'/>
+  </property>
+  <model length='2' height='2.8' width='2'>
+    <author>
+      <name>Christopher Hancox</name>
+      <email>chris.hancox@live.com</email>
+      <license>GPL</license>
+      <year>2016</year>
+    </author>
+    <name lang='fr'>Centale à charbon</name>
+    <name lang='en'>Wind Turbine</name>
+    <name lang='de'>Kohlekraftwerk</name>
+    <description lang='fr'>Centrale électric à charbon.</description>
+    <description lang='en'>Wind Turbine</description>
+    <description lang='de'>Ein Kohlekraftwerk, benötigt weniger Platz als ein Atomkraftwerk - bringt dafür aber auch nicht soviel Leistung und verschmutzt die Umwelt mehr.</description>
+  </model>
+</object>

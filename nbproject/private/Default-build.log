@@ -1,0 +1,449 @@
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/home/chris/opencity'
+Making all in config
+make[2]: Entering directory '/home/chris/opencity/config'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/chris/opencity/config'
+Making all in docs
+make[2]: Entering directory '/home/chris/opencity/docs'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/chris/opencity/docs'
+Making all in map
+make[2]: Entering directory '/home/chris/opencity/map'
+Making all in heightmap
+make[3]: Entering directory '/home/chris/opencity/map/heightmap'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/chris/opencity/map/heightmap'
+make[3]: Entering directory '/home/chris/opencity/map'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/chris/opencity/map'
+make[2]: Leaving directory '/home/chris/opencity/map'
+Making all in sound
+make[2]: Entering directory '/home/chris/opencity/sound'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/chris/opencity/sound'
+Making all in src
+make[2]: Entering directory '/home/chris/opencity/src'
+Making all in binreloc
+make[3]: Entering directory '/home/chris/opencity/src/binreloc'
+depbase=`echo binreloc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c99 -g3 -gdwarf-2 -MT binreloc.o -MD -MP -MF $depbase.Tpo -c -o binreloc.o binreloc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libbinreloc.a
+ar cru libbinreloc.a binreloc.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libbinreloc.a
+make[3]: Leaving directory '/home/chris/opencity/src/binreloc'
+Making all in enum
+make[3]: Entering directory '/home/chris/opencity/src/enum'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/chris/opencity/src/enum'
+Making all in framework
+make[3]: Entering directory '/home/chris/opencity/src/framework'
+Making all in System
+make[4]: Entering directory '/home/chris/opencity/src/framework/System'
+Making all in Information
+make[5]: Entering directory '/home/chris/opencity/src/framework/System/Information'
+Making all in Software
+make[6]: Entering directory '/home/chris/opencity/src/framework/System/Information/Software'
+depbase=`echo CSdl.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../../../..  -I../../../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CSdl.lo -MD -MP -MF $depbase.Tpo -c -o CSdl.lo CSdl.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../../../.. -I../../../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CSdl.lo -MD -MP -MF .deps/CSdl.Tpo -c CSdl.cpp  -fPIC -DPIC -o .libs/CSdl.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../../../.. -I../../../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CSdl.lo -MD -MP -MF .deps/CSdl.Tpo -c CSdl.cpp -o CSdl.o >/dev/null 2>&1
+/bin/bash ../../../../../libtool  --tag=CXX   --mode=link /usr/bin/g++  -std=c++98 -g3 -gdwarf-2  -L/usr/X11R6/lib    -o libSoftware.la  CSdl.lo  -lSDL_net -lSDL_image -lGLU -lGL -L/usr/lib/x86_64-linux-gnu -lSDL -lSDL_mixer -lpng12
+libtool: link: ar cru .libs/libSoftware.a .libs/CSdl.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libSoftware.a
+libtool: link: ( cd ".libs" && rm -f "libSoftware.la" && ln -s "../libSoftware.la" "libSoftware.la" )
+make[6]: Leaving directory '/home/chris/opencity/src/framework/System/Information/Software'
+make[6]: Entering directory '/home/chris/opencity/src/framework/System/Information'
+/bin/bash ../../../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -std=c99 -g3 -gdwarf-2  -L/usr/X11R6/lib    -o libInformation.la   Software/libSoftware.la -lSDL_net -lSDL_image -lGLU -lGL -L/usr/lib/x86_64-linux-gnu -lSDL -lSDL_mixer -lpng12
+libtool: link: (cd .libs/libInformation.lax/libSoftware.a && ar x "/home/chris/opencity/src/framework/System/Information/Software/.libs/libSoftware.a")
+libtool: link: ar cru .libs/libInformation.a   .libs/libInformation.lax/libSoftware.a/CSdl.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libInformation.a
+libtool: link: rm -fr .libs/libInformation.lax
+libtool: link: ( cd ".libs" && rm -f "libInformation.la" && ln -s "../libInformation.la" "libInformation.la" )
+make[6]: Leaving directory '/home/chris/opencity/src/framework/System/Information'
+make[5]: Leaving directory '/home/chris/opencity/src/framework/System/Information'
+Making all in Reflection
+make[5]: Entering directory '/home/chris/opencity/src/framework/System/Reflection'
+depbase=`echo CMemberInfo.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../../..  -I../../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CMemberInfo.lo -MD -MP -MF $depbase.Tpo -c -o CMemberInfo.lo CMemberInfo.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../../.. -I../../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CMemberInfo.lo -MD -MP -MF .deps/CMemberInfo.Tpo -c CMemberInfo.cpp  -fPIC -DPIC -o .libs/CMemberInfo.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../../.. -I../../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CMemberInfo.lo -MD -MP -MF .deps/CMemberInfo.Tpo -c CMemberInfo.cpp -o CMemberInfo.o >/dev/null 2>&1
+/bin/bash ../../../../libtool  --tag=CXX   --mode=link /usr/bin/g++  -std=c++98 -g3 -gdwarf-2  -L/usr/X11R6/lib    -o libReflection.la  CMemberInfo.lo  -lSDL_net -lSDL_image -lGLU -lGL -L/usr/lib/x86_64-linux-gnu -lSDL -lSDL_mixer -lpng12
+libtool: link: ar cru .libs/libReflection.a .libs/CMemberInfo.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libReflection.a
+libtool: link: ( cd ".libs" && rm -f "libReflection.la" && ln -s "../libReflection.la" "libReflection.la" )
+make[5]: Leaving directory '/home/chris/opencity/src/framework/System/Reflection'
+make[5]: Entering directory '/home/chris/opencity/src/framework/System'
+depbase=`echo AValueType.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../..  -I../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT AValueType.lo -MD -MP -MF $depbase.Tpo -c -o AValueType.lo AValueType.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT AValueType.lo -MD -MP -MF .deps/AValueType.Tpo -c AValueType.cpp  -fPIC -DPIC -o .libs/AValueType.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT AValueType.lo -MD -MP -MF .deps/AValueType.Tpo -c AValueType.cpp -o AValueType.o >/dev/null 2>&1
+depbase=`echo CConsole.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../..  -I../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CConsole.lo -MD -MP -MF $depbase.Tpo -c -o CConsole.lo CConsole.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CConsole.lo -MD -MP -MF .deps/CConsole.Tpo -c CConsole.cpp  -fPIC -DPIC -o .libs/CConsole.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CConsole.lo -MD -MP -MF .deps/CConsole.Tpo -c CConsole.cpp -o CConsole.o >/dev/null 2>&1
+depbase=`echo CNullValue.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../..  -I../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CNullValue.lo -MD -MP -MF $depbase.Tpo -c -o CNullValue.lo CNullValue.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CNullValue.lo -MD -MP -MF .deps/CNullValue.Tpo -c CNullValue.cpp  -fPIC -DPIC -o .libs/CNullValue.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CNullValue.lo -MD -MP -MF .deps/CNullValue.Tpo -c CNullValue.cpp -o CNullValue.o >/dev/null 2>&1
+depbase=`echo CObject.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../..  -I../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CObject.lo -MD -MP -MF $depbase.Tpo -c -o CObject.lo CObject.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CObject.lo -MD -MP -MF .deps/CObject.Tpo -c CObject.cpp  -fPIC -DPIC -o .libs/CObject.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CObject.lo -MD -MP -MF .deps/CObject.Tpo -c CObject.cpp -o CObject.o >/dev/null 2>&1
+depbase=`echo CString.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../..  -I../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CString.lo -MD -MP -MF $depbase.Tpo -c -o CString.lo CString.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CString.lo -MD -MP -MF .deps/CString.Tpo -c CString.cpp  -fPIC -DPIC -o .libs/CString.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CString.lo -MD -MP -MF .deps/CString.Tpo -c CString.cpp -o CString.o >/dev/null 2>&1
+depbase=`echo CType.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../..  -I../../../src/framework -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT CType.lo -MD -MP -MF $depbase.Tpo -c -o CType.lo CType.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CType.lo -MD -MP -MF .deps/CType.Tpo -c CType.cpp  -fPIC -DPIC -o .libs/CType.o
+libtool: compile:  /usr/bin/g++ -DHAVE_CONFIG_H -I. -I../../.. -I../../../src/framework -I/usr/X11R6/include -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12 -std=c++98 -g3 -gdwarf-2 -MT CType.lo -MD -MP -MF .deps/CType.Tpo -c CType.cpp -o CType.o >/dev/null 2>&1
+/bin/bash ../../../libtool  --tag=CXX   --mode=link /usr/bin/g++  -std=c++98 -g3 -gdwarf-2  -L/usr/X11R6/lib    -o libSystem.la  AValueType.lo CConsole.lo CNullValue.lo CObject.lo CString.lo CType.lo Information/libInformation.la Reflection/libReflection.la -lSDL_net -lSDL_image -lGLU -lGL -L/usr/lib/x86_64-linux-gnu -lSDL -lSDL_mixer -lpng12
+libtool: link: (cd .libs/libSystem.lax/libInformation.a && ar x "/home/chris/opencity/src/framework/System/Information/.libs/libInformation.a")
+libtool: link: (cd .libs/libSystem.lax/libReflection.a && ar x "/home/chris/opencity/src/framework/System/Reflection/.libs/libReflection.a")
+libtool: link: ar cru .libs/libSystem.a .libs/AValueType.o .libs/CConsole.o .libs/CNullValue.o .libs/CObject.o .libs/CString.o .libs/CType.o   .libs/libSystem.lax/libInformation.a/CSdl.o  .libs/libSystem.lax/libReflection.a/CMemberInfo.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libSystem.a
+libtool: link: rm -fr .libs/libSystem.lax
+libtool: link: ( cd ".libs" && rm -f "libSystem.la" && ln -s "../libSystem.la" "libSystem.la" )
+make[5]: Leaving directory '/home/chris/opencity/src/framework/System'
+make[4]: Leaving directory '/home/chris/opencity/src/framework/System'
+make[4]: Entering directory '/home/chris/opencity/src/framework'
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -std=c99 -g3 -gdwarf-2  -L/usr/X11R6/lib    -o libsharpplus.la   System/libSystem.la -lSDL_net -lSDL_image -lGLU -lGL -L/usr/lib/x86_64-linux-gnu -lSDL -lSDL_mixer -lpng12
+libtool: link: (cd .libs/libsharpplus.lax/libSystem.a && ar x "/home/chris/opencity/src/framework/System/.libs/libSystem.a")
+libtool: link: ar cru .libs/libsharpplus.a   .libs/libsharpplus.lax/libSystem.a/AValueType.o .libs/libsharpplus.lax/libSystem.a/CConsole.o .libs/libsharpplus.lax/libSystem.a/CMemberInfo.o .libs/libsharpplus.lax/libSystem.a/CNullValue.o .libs/libsharpplus.lax/libSystem.a/CObject.o .libs/libsharpplus.lax/libSystem.a/CSdl.o .libs/libsharpplus.lax/libSystem.a/CString.o .libs/libsharpplus.lax/libSystem.a/CType.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libsharpplus.a
+libtool: link: rm -fr .libs/libsharpplus.lax
+libtool: link: ( cd ".libs" && rm -f "libsharpplus.la" && ln -s "../libsharpplus.la" "libsharpplus.la" )
+make[4]: Leaving directory '/home/chris/opencity/src/framework'
+make[3]: Leaving directory '/home/chris/opencity/src/framework'
+Making all in mapgen
+make[3]: Entering directory '/home/chris/opencity/src/mapgen'
+depbase=`echo map.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT map.o -MD -MP -MF $depbase.Tpo -c -o map.o map.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mapmaker.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT mapmaker.o -MD -MP -MF $depbase.Tpo -c -o mapmaker.o mapmaker.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/choper.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/choper.o -MD -MP -MF $depbase.Tpo -c -o filter/choper.o filter/choper.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/context.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/context.o -MD -MP -MF $depbase.Tpo -c -o filter/context.o filter/context.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/contextOnlyPositive.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/contextOnlyPositive.o -MD -MP -MF $depbase.Tpo -c -o filter/contextOnlyPositive.o filter/contextOnlyPositive.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/contextualizer.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/contextualizer.o -MD -MP -MF $depbase.Tpo -c -o filter/contextualizer.o filter/contextualizer.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/cutter.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/cutter.o -MD -MP -MF $depbase.Tpo -c -o filter/cutter.o filter/cutter.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+filter/cutter.cpp: In destructor ‘virtual MapGen::Cutter::~Cutter()’:
+filter/cutter.cpp:49:9: warning: deleting object of polymorphic class type ‘MapGen::CutterFunctor’ which has non-virtual destructor might cause undefined behaviour [-Wdelete-non-virtual-dtor]
+  delete _cutterfunctor;
+         ^
+depbase=`echo filter/filter.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/filter.o -MD -MP -MF $depbase.Tpo -c -o filter/filter.o filter/filter.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/flattern.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/flattern.o -MD -MP -MF $depbase.Tpo -c -o filter/flattern.o filter/flattern.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/gaussblur.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/gaussblur.o -MD -MP -MF $depbase.Tpo -c -o filter/gaussblur.o filter/gaussblur.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/normalize.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/normalize.o -MD -MP -MF $depbase.Tpo -c -o filter/normalize.o filter/normalize.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/shaper.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/shaper.o -MD -MP -MF $depbase.Tpo -c -o filter/shaper.o filter/shaper.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/shape.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/shape.o -MD -MP -MF $depbase.Tpo -c -o filter/shape.o filter/shape.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/shapeBubble.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/shapeBubble.o -MD -MP -MF $depbase.Tpo -c -o filter/shapeBubble.o filter/shapeBubble.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/shapeTopRound.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/shapeTopRound.o -MD -MP -MF $depbase.Tpo -c -o filter/shapeTopRound.o filter/shapeTopRound.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filter/shapeVolcano.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT filter/shapeVolcano.o -MD -MP -MF $depbase.Tpo -c -o filter/shapeVolcano.o filter/shapeVolcano.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo generator/diamon.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT generator/diamon.o -MD -MP -MF $depbase.Tpo -c -o generator/diamon.o generator/diamon.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo generator/generator.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT generator/generator.o -MD -MP -MF $depbase.Tpo -c -o generator/generator.o generator/generator.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo generator/heightMap.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/mapgen -I../../src/mapgen/filter -I../../src/mapgen/generator -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT generator/heightMap.o -MD -MP -MF $depbase.Tpo -c -o generator/heightMap.o generator/heightMap.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libmapgen.a
+ar cru libmapgen.a map.o mapmaker.o filter/choper.o filter/context.o filter/contextOnlyPositive.o filter/contextualizer.o filter/cutter.o filter/filter.o filter/flattern.o filter/gaussblur.o filter/normalize.o filter/shaper.o filter/shape.o filter/shapeBubble.o filter/shapeTopRound.o filter/shapeVolcano.o generator/diamon.o generator/generator.o generator/heightMap.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libmapgen.a
+make[3]: Leaving directory '/home/chris/opencity/src/mapgen'
+Making all in mas
+make[3]: Entering directory '/home/chris/opencity/src/mas'
+depbase=`echo agent.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT agent.o -MD -MP -MF $depbase.Tpo -c -o agent.o agent.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo agentdemonstrator.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT agentdemonstrator.o -MD -MP -MF $depbase.Tpo -c -o agentdemonstrator.o agentdemonstrator.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo agentpolice.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT agentpolice.o -MD -MP -MF $depbase.Tpo -c -o agentpolice.o agentpolice.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+agentpolice.cpp: In member function ‘void AgentPolice::followPath()’:
+agentpolice.cpp:423:7: warning: variable ‘ok’ set but not used [-Wunused-but-set-variable]
+  bool ok = false;
+       ^
+depbase=`echo agentrobber.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT agentrobber.o -MD -MP -MF $depbase.Tpo -c -o agentrobber.o agentrobber.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo any.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT any.o -MD -MP -MF $depbase.Tpo -c -o any.o any.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo environment.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT environment.o -MD -MP -MF $depbase.Tpo -c -o environment.o environment.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo kernel.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT kernel.o -MD -MP -MF $depbase.Tpo -c -o kernel.o kernel.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo message.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT message.o -MD -MP -MF $depbase.Tpo -c -o message.o message.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libmas.a
+ar cru libmas.a agent.o agentdemonstrator.o agentpolice.o agentrobber.o any.o environment.o kernel.o message.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libmas.a
+make[3]: Leaving directory '/home/chris/opencity/src/mas'
+Making all in model
+make[3]: Entering directory '/home/chris/opencity/src/model'
+depbase=`echo ac3dmaterial.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT ac3dmaterial.o -MD -MP -MF $depbase.Tpo -c -o ac3dmaterial.o ac3dmaterial.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ac3dmodel.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT ac3dmodel.o -MD -MP -MF $depbase.Tpo -c -o ac3dmodel.o ac3dmodel.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ac3dobject.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT ac3dobject.o -MD -MP -MF $depbase.Tpo -c -o ac3dobject.o ac3dobject.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ac3dsurface.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT ac3dsurface.o -MD -MP -MF $depbase.Tpo -c -o ac3dsurface.o ac3dsurface.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo model.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT model.o -MD -MP -MF $depbase.Tpo -c -o model.o model.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+model.cpp: In member function ‘void Model::DisplayList(const float&, const float&, const signed char*, uint) const’:
+model.cpp:129:12: warning: narrowing conversion of ‘(((int)(*(tabY + 3u))) - ((int)(* tabY)))’ from ‘int’ to ‘GLdouble {aka double}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   1,tabY[3]-tabY[0],0,0,
+            ^
+model.cpp:131:12: warning: narrowing conversion of ‘(((int)(*(tabY + 1u))) - ((int)(* tabY)))’ from ‘int’ to ‘GLdouble {aka double}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   0,tabY[1]-tabY[0],1,0,
+            ^
+depbase=`echo modelloader.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT modelloader.o -MD -MP -MF $depbase.Tpo -c -o modelloader.o modelloader.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libmodel.a
+ar cru libmodel.a ac3dmaterial.o ac3dmodel.o ac3dobject.o ac3dsurface.o model.o modelloader.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libmodel.a
+make[3]: Leaving directory '/home/chris/opencity/src/model'
+Making all in networking
+make[3]: Entering directory '/home/chris/opencity/src/networking'
+depbase=`echo networking.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT networking.o -MD -MP -MF $depbase.Tpo -c -o networking.o networking.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libnet.a
+ar cru libnet.a networking.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libnet.a
+make[3]: Leaving directory '/home/chris/opencity/src/networking'
+Making all in pngfuncs
+make[3]: Entering directory '/home/chris/opencity/src/pngfuncs'
+depbase=`echo pngfuncs.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..  -I../../src/pngfuncs -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c99 -g3 -gdwarf-2 -MT pngfuncs.o -MD -MP -MF $depbase.Tpo -c -o pngfuncs.o pngfuncs.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libpngfuncs.a
+ar cru libpngfuncs.a pngfuncs.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libpngfuncs.a
+make[3]: Leaving directory '/home/chris/opencity/src/pngfuncs'
+Making all in simulator
+make[3]: Entering directory '/home/chris/opencity/src/simulator'
+depbase=`echo commercialsim.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT commercialsim.o -MD -MP -MF $depbase.Tpo -c -o commercialsim.o commercialsim.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo electricitysim.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT electricitysim.o -MD -MP -MF $depbase.Tpo -c -o electricitysim.o electricitysim.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo industrialsim.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT industrialsim.o -MD -MP -MF $depbase.Tpo -c -o industrialsim.o industrialsim.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mainsim.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT mainsim.o -MD -MP -MF $depbase.Tpo -c -o mainsim.o mainsim.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo residentialsim.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT residentialsim.o -MD -MP -MF $depbase.Tpo -c -o residentialsim.o residentialsim.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo simulator.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT simulator.o -MD -MP -MF $depbase.Tpo -c -o simulator.o simulator.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo trafficsim.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I../../src/structure -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT trafficsim.o -MD -MP -MF $depbase.Tpo -c -o trafficsim.o trafficsim.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libsim.a
+ar cru libsim.a commercialsim.o electricitysim.o industrialsim.o mainsim.o residentialsim.o simulator.o trafficsim.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libsim.a
+make[3]: Leaving directory '/home/chris/opencity/src/simulator'
+Making all in structure
+make[3]: Entering directory '/home/chris/opencity/src/structure'
+depbase=`echo pathstructure.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT pathstructure.o -MD -MP -MF $depbase.Tpo -c -o pathstructure.o pathstructure.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo rcistructure.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT rcistructure.o -MD -MP -MF $depbase.Tpo -c -o rcistructure.o rcistructure.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo structure.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT structure.o -MD -MP -MF $depbase.Tpo -c -o structure.o structure.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo treestructure.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT treestructure.o -MD -MP -MF $depbase.Tpo -c -o treestructure.o treestructure.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo wegstructure.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src -I../../src/enum -I../../src/mas -I../../src/networking -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT wegstructure.o -MD -MP -MF $depbase.Tpo -c -o wegstructure.o wegstructure.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libstruct.a
+ar cru libstruct.a pathstructure.o rcistructure.o structure.o treestructure.o wegstructure.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libstruct.a
+make[3]: Leaving directory '/home/chris/opencity/src/structure'
+Making all in tinyxml
+make[3]: Entering directory '/home/chris/opencity/src/tinyxml'
+depbase=`echo tinystr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..   -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT tinystr.o -MD -MP -MF $depbase.Tpo -c -o tinystr.o tinystr.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tinyxml.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..   -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT tinyxml.o -MD -MP -MF $depbase.Tpo -c -o tinyxml.o tinyxml.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tinyxmlerror.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..   -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT tinyxmlerror.o -MD -MP -MF $depbase.Tpo -c -o tinyxmlerror.o tinyxmlerror.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tinyxmlparser.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..   -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT tinyxmlparser.o -MD -MP -MF $depbase.Tpo -c -o tinyxmlparser.o tinyxmlparser.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libtinyxml.a
+ar cru libtinyxml.a tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libtinyxml.a
+make[3]: Leaving directory '/home/chris/opencity/src/tinyxml'
+Making all in tinyxpath
+make[3]: Entering directory '/home/chris/opencity/src/tinyxpath'
+depbase=`echo action_store.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT action_store.o -MD -MP -MF $depbase.Tpo -c -o action_store.o action_store.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo lex_util.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT lex_util.o -MD -MP -MF $depbase.Tpo -c -o lex_util.o lex_util.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo node_set.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT node_set.o -MD -MP -MF $depbase.Tpo -c -o node_set.o node_set.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tokenlist.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT tokenlist.o -MD -MP -MF $depbase.Tpo -c -o tokenlist.o tokenlist.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xml_util.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xml_util.o -MD -MP -MF $depbase.Tpo -c -o xml_util.o xml_util.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xpath_expression.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xpath_expression.o -MD -MP -MF $depbase.Tpo -c -o xpath_expression.o xpath_expression.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xpath_processor.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xpath_processor.o -MD -MP -MF $depbase.Tpo -c -o xpath_processor.o xpath_processor.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+xpath_processor.cpp: In member function ‘void TinyXPath::xpath_processor::v_execute_absolute_path(unsigned int, bool, bool)’:
+xpath_processor.cpp:1003:11: warning: variable ‘i_bak_position’ set but not used [-Wunused-but-set-variable]
+       int i_bak_position, i_current, i_first, i_relative;
+           ^
+xpath_processor.cpp: In member function ‘void TinyXPath::xpath_processor::v_order_recurs(TiXmlNode*, int&)’:
+xpath_processor.cpp:2077:46: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+    Np_base -> SetUserData ((void *) i_current++);
+                                              ^
+depbase=`echo xpath_stack.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xpath_stack.o -MD -MP -MF $depbase.Tpo -c -o xpath_stack.o xpath_stack.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xpath_static.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xpath_static.o -MD -MP -MF $depbase.Tpo -c -o xpath_static.o xpath_static.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xpath_stream.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xpath_stream.o -MD -MP -MF $depbase.Tpo -c -o xpath_stream.o xpath_stream.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xpath_syntax.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/tinyxml/ -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT xpath_syntax.o -MD -MP -MF $depbase.Tpo -c -o xpath_syntax.o xpath_syntax.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libtinyxpath.a
+ar cru libtinyxpath.a action_store.o lex_util.o node_set.o tokenlist.o xml_util.o xpath_expression.o xpath_processor.o xpath_stack.o xpath_static.o xpath_stream.o xpath_syntax.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libtinyxpath.a
+make[3]: Leaving directory '/home/chris/opencity/src/tinyxpath'
+Making all in triangulation
+make[3]: Entering directory '/home/chris/opencity/src/triangulation'
+depbase=`echo star.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src/triangulation -I../../src -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT star.o -MD -MP -MF $depbase.Tpo -c -o star.o star.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libtriangulation.a
+ar cru libtriangulation.a star.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libtriangulation.a
+make[3]: Leaving directory '/home/chris/opencity/src/triangulation'
+make[3]: Entering directory '/home/chris/opencity/src'
+depbase=`echo audiomanagersdl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I..  -I../src -I../src/binreloc -I../src/enum -I../src/framework -I../src/mas -I../src/mapgen -I../src/model -I../src/networking -I../src/pngfuncs -I../src/simulator -I../src/structure -I../src/tinyxml -I../src/tinyxpath -I../src/triangulation -DDATADIR=\"/usr/local/share\" -DSYSCONFDIR=\"/usr/local/etc\" -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT audiomanagersdl.o -MD -MP -MF $depbase.Tpo -c -o audiomanagersdl.o audiomanagersdl.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo buildinglayer.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I..  -I../src -I../src/binreloc -I../src/enum -I../src/framework -I../src/mas -I../src/mapgen -I../src/model -I../src/networking -I../src/pngfuncs -I../src/simulator -I../src/structure -I../src/tinyxml -I../src/tinyxpath -I../src/triangulation -DDATADIR=\"/usr/local/share\" -DSYSCONFDIR=\"/usr/local/etc\" -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT buildinglayer.o -MD -MP -MF $depbase.Tpo -c -o buildinglayer.o buildinglayer.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo city.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+/usr/bin/g++ -DHAVE_CONFIG_H -I. -I..  -I../src -I../src/binreloc -I../src/enum -I../src/framework -I../src/mas -I../src/mapgen -I../src/model -I../src/networking -I../src/pngfuncs -I../src/simulator -I../src/structure -I../src/tinyxml -I../src/tinyxpath -I../src/triangulation -DDATADIR=\"/usr/local/share\" -DSYSCONFDIR=\"/usr/local/etc\" -I/usr/X11R6/include  -DNDEBUG -Wall -Wmissing-braces -Wparentheses -pedantic-errors -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libpng12  -std=c++98 -g3 -gdwarf-2 -MT city.o -MD -MP -MF $depbase.Tpo -c -o city.o city.cpp &&\
+mv -f $depbase.Tpo $depbase.Po
+city.cpp:993:63: error: missing terminating " character
+    = new GUIButton( GUIBUTTON_POSITION_TOOL, ocDataDirPrefix( "graphism/gui/status/wind ));
+                                                               ^
+city.cpp:993:4: error: missing terminating " character
+    = new GUIButton( GUIBUTTON_POSITION_TOOL, ocDataDirPrefix( "graphism/gui/status/wind ));
+    ^
+city.cpp: In member function ‘void City::_CreateGUI()’:
+city.cpp:992:20: error: ‘OC_TOOL_WIND’ was not declared in this scope
+  _apbtnCurrentTool[OC_TOOL_WIND]
+                    ^
+city.cpp:995:106: error: expected ‘)’ before ‘;’ token
+   = new GUIButton( GUIBUTTON_POSITION_TOOL, ocDataDirPrefix( "graphism/gui/status/power_plant_nuclear" ));
+                                                                                                          ^
+Makefile:689: recipe for target 'city.o' failed
+make[3]: *** [city.o] Error 1
+make[3]: Leaving directory '/home/chris/opencity/src'
+Makefile:725: recipe for target 'all-recursive' failed
+make[2]: *** [all-recursive] Error 1
+make[2]: Leaving directory '/home/chris/opencity/src'
+Makefile:503: recipe for target 'all-recursive' failed
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory '/home/chris/opencity'
+Makefile:393: recipe for target 'all' failed
+make: *** [all] Error 2

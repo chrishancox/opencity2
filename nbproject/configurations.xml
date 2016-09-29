@@ -1,0 +1,1868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="src">
+        <df name="binreloc">
+          <in>binreloc.c</in>
+        </df>
+        <df name="framework">
+          <df name="System">
+            <df name="Information">
+              <df name="Software">
+                <in>CSdl.cpp</in>
+              </df>
+            </df>
+            <df name="Reflection">
+              <in>CMemberInfo.cpp</in>
+            </df>
+            <in>AValueType.cpp</in>
+            <in>CConsole.cpp</in>
+            <in>CNullValue.cpp</in>
+            <in>CObject.cpp</in>
+            <in>CString.cpp</in>
+            <in>CType.cpp</in>
+          </df>
+        </df>
+        <df name="mapgen">
+          <df name="filter">
+            <in>choper.cpp</in>
+            <in>context.cpp</in>
+            <in>contextOnlyPositive.cpp</in>
+            <in>contextualizer.cpp</in>
+            <in>cutter.cpp</in>
+            <in>filter.cpp</in>
+            <in>flattern.cpp</in>
+            <in>gaussblur.cpp</in>
+            <in>normalize.cpp</in>
+            <in>shape.cpp</in>
+            <in>shapeBubble.cpp</in>
+            <in>shapeTopRound.cpp</in>
+            <in>shapeVolcano.cpp</in>
+            <in>shaper.cpp</in>
+          </df>
+          <df name="generator">
+            <in>diamon.cpp</in>
+            <in>generator.cpp</in>
+            <in>heightMap.cpp</in>
+          </df>
+          <in>map.cpp</in>
+          <in>mapmaker.cpp</in>
+        </df>
+        <df name="mas">
+          <in>agent.cpp</in>
+          <in>agentdemonstrator.cpp</in>
+          <in>agentpolice.cpp</in>
+          <in>agentrobber.cpp</in>
+          <in>any.cpp</in>
+          <in>environment.cpp</in>
+          <in>kernel.cpp</in>
+          <in>message.cpp</in>
+        </df>
+        <df name="model">
+          <in>ac3dmaterial.cpp</in>
+          <in>ac3dmodel.cpp</in>
+          <in>ac3dobject.cpp</in>
+          <in>ac3dsurface.cpp</in>
+          <in>model.cpp</in>
+          <in>modelloader.cpp</in>
+        </df>
+        <df name="networking">
+          <in>networking.cpp</in>
+        </df>
+        <df name="pngfuncs">
+          <in>pngfuncs.c</in>
+        </df>
+        <df name="simulator">
+          <in>commercialsim.cpp</in>
+          <in>electricitysim.cpp</in>
+          <in>industrialsim.cpp</in>
+          <in>mainsim.cpp</in>
+          <in>residentialsim.cpp</in>
+          <in>simulator.cpp</in>
+          <in>trafficsim.cpp</in>
+        </df>
+        <df name="structure">
+          <in>pathstructure.cpp</in>
+          <in>rcistructure.cpp</in>
+          <in>structure.cpp</in>
+          <in>treestructure.cpp</in>
+          <in>wegstructure.cpp</in>
+        </df>
+        <df name="tinyxml">
+          <in>tinystr.cpp</in>
+          <in>tinyxml.cpp</in>
+          <in>tinyxmlerror.cpp</in>
+          <in>tinyxmlparser.cpp</in>
+        </df>
+        <df name="tinyxpath">
+          <in>action_store.cpp</in>
+          <in>lex_util.cpp</in>
+          <in>node_set.cpp</in>
+          <in>tokenlist.cpp</in>
+          <in>xml_util.cpp</in>
+          <in>xpath_expression.cpp</in>
+          <in>xpath_processor.cpp</in>
+          <in>xpath_stack.cpp</in>
+          <in>xpath_static.cpp</in>
+          <in>xpath_stream.cpp</in>
+          <in>xpath_syntax.cpp</in>
+        </df>
+        <df name="triangulation">
+          <in>star.cpp</in>
+        </df>
+        <in>audiomanager.cpp</in>
+        <in>audiomanagersdl.cpp</in>
+        <in>buildinglayer.cpp</in>
+        <in>city.cpp</in>
+        <in>conf.cpp</in>
+        <in>destination.cpp</in>
+        <in>extensionmanager.cpp</in>
+        <in>globalvar.cpp</in>
+        <in>graphicmanager.cpp</in>
+        <in>gui3dview.cpp</in>
+        <in>guibar.cpp</in>
+        <in>guibutton.cpp</in>
+        <in>guicontainer.cpp</in>
+        <in>guilabel.cpp</in>
+        <in>guimain.cpp</in>
+        <in>layer.cpp</in>
+        <in>main.cpp</in>
+        <in>map.cpp</in>
+        <in>movement.cpp</in>
+        <in>movementmanager.cpp</in>
+        <in>pathfinder.cpp</in>
+        <in>persistence.cpp</in>
+        <in>property.cpp</in>
+        <in>propertymanager.cpp</in>
+        <in>propertymanager2.cpp</in>
+        <in>renderer.cpp</in>
+        <in>texture.cpp</in>
+        <in>ui.cpp</in>
+        <in>vehicle.cpp</in>
+        <in>zen.cpp</in>
+      </df>
+      <df name="viewer">
+        <in>viewer.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0"
+                 commonFlags="-mtune=generic -march=x86-64 -pedantic-errors -std=c++98 -fPIC -fstack-protector-strong"/>
+        <element flagsID="1"
+                 commonFlags="-mtune=generic -march=x86-64 -pedantic-errors -std=c++98 -fstack-protector-strong"/>
+        <element flagsID="2" commonFlags="-pedantic-errors -std=c++98"/>
+        <element flagsID="3" commonFlags="-std=c99"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>src/opencity</executablePath>
+          <cTool>
+            <preprocessorList>
+              <Elem>HAVE_CONFIG_H</Elem>
+              <Elem>NDEBUG</Elem>
+              <Elem>_GNU_SOURCE=1</Elem>
+              <Elem>_REENTRANT</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>./configure CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2"</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <folder path="0/src/binreloc">
+        <cTool>
+          <incDir>
+            <pElem>src/binreloc</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/framework">
+        <ccTool>
+          <preprocessorList>
+            <Elem>PIC=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/framework/System/Information">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src/framework/System</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System/Information/Software</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/framework/System/Reflection">
+        <ccTool>
+          <incDir>
+            <pElem>src/framework/System</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System/Reflection</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/mapgen">
+        <ccTool>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/mas">
+        <ccTool>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/model">
+        <ccTool>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/networking">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/networking</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/pngfuncs">
+        <cTool>
+          <incDir>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src/simulator">
+        <ccTool>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/structure">
+        <ccTool>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/tinyxml">
+        <ccTool>
+          <incDir>
+            <pElem>src/tinyxml</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src/tinyxpath">
+        <ccTool>
+          <incDir>
+            <pElem>src/tinyxml</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/src/triangulation">
+        <ccTool>
+          <incDir>
+            <pElem>src/triangulation</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/viewer">
+        <ccTool>
+          <incDir>
+            <pElem>viewer</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/tinyxml</pElem>
+            <pElem>src/tinyxpath</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>_GNU_SOURCE=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <item path="src/audiomanager.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/audiomanagersdl.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/binreloc/binreloc.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="src/buildinglayer.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/city.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/simulator</pElem>
+            <pElem>src</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/conf.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="2">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>src/binreloc</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>src/simulator</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/tinyxml</pElem>
+            <pElem>src/tinyxpath</pElem>
+            <pElem>src/triangulation</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_GNU_SOURCE=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/destination.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/extensionmanager.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/AValueType.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/CConsole.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/CNullValue.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/CObject.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System/Reflection</pElem>
+            <pElem>src/framework/System</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/CString.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/framework</pElem>
+            <pElem>src/framework/System</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/CType.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>src/framework/System</pElem>
+            <pElem>src/framework/System/Reflection</pElem>
+            <pElem>src/framework</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/framework/System/Information/Software/CSdl.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/framework/System/Reflection/CMemberInfo.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/globalvar.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/graphicmanager.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/gui3dview.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/guibar.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/guibutton.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/guicontainer.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/guilabel.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/guimain.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/layer.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="2">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>src/binreloc</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>src/simulator</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/tinyxml</pElem>
+            <pElem>src/tinyxpath</pElem>
+            <pElem>src/triangulation</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_GNU_SOURCE=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/map.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/choper.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/context.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/contextOnlyPositive.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/contextualizer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/cutter.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/filter.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/flattern.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/gaussblur.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/normalize.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/shape.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/shapeBubble.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/shapeTopRound.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/shapeVolcano.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/filter/shaper.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/filter</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/generator/diamon.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/mapgen/generator</pElem>
+            <pElem>src</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/generator/generator.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/generator</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/generator/heightMap.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/mapgen/generator</pElem>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>/usr/include/SDL</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/map.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/mapgen</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mapgen/mapmaker.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/mapgen/generator</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src/mapgen/filter</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/agent.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/agentdemonstrator.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/agentpolice.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/agentrobber.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/any.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/environment.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/kernel.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/mas/message.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/mas</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/model/ac3dmaterial.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/model</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/model/ac3dmodel.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/model</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/model/ac3dobject.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/model</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/model/ac3dsurface.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>src/model</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/model/model.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>src/model</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/model/modelloader.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/triangulation</pElem>
+            <pElem>.</pElem>
+            <pElem>src/model</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/movement.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/movementmanager.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/networking/networking.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="src/pathfinder.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/persistence.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/pngfuncs/pngfuncs.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="src/property.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="2">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>src/binreloc</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>src/simulator</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/tinyxml</pElem>
+            <pElem>src/tinyxpath</pElem>
+            <pElem>src/triangulation</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_GNU_SOURCE=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/propertymanager.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/propertymanager2.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="2">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>src/binreloc</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>src/simulator</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/tinyxml</pElem>
+            <pElem>src/tinyxpath</pElem>
+            <pElem>src/triangulation</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_GNU_SOURCE=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/renderer.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="2">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>src/binreloc</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/framework</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/model</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/pngfuncs</pElem>
+            <pElem>src/simulator</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/tinyxml</pElem>
+            <pElem>src/tinyxpath</pElem>
+            <pElem>src/triangulation</pElem>
+            <pElem>/usr/X11R6/include</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_GNU_SOURCE=1</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/simulator/commercialsim.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/simulator/electricitysim.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/simulator/industrialsim.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/simulator/mainsim.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/simulator/residentialsim.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/simulator/simulator.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/simulator/trafficsim.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src/simulator</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/structure/pathstructure.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/structure/rcistructure.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/structure/structure.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/structure/treestructure.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/structure/wegstructure.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/texture.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>.</pElem>
+            <pElem>src/structure</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tinyxml/tinystr.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="src/tinyxml/tinyxml.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tinyxml/tinyxmlerror.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tinyxml/tinyxmlparser.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/action_store.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/lex_util.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/node_set.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/tokenlist.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xml_util.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xpath_expression.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xpath_processor.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xpath_stack.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xpath_static.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xpath_stream.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/tinyxpath/xpath_syntax.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxpath</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="src/triangulation/star.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="src/ui.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/vehicle.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/enum</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="src/zen.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="1">
+          <incDir>
+            <pElem>src/tinyxml</pElem>
+            <pElem>/usr/include/SDL</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>src/enum</pElem>
+            <pElem>src/mas</pElem>
+            <pElem>src/networking</pElem>
+            <pElem>src/mapgen</pElem>
+            <pElem>src/binreloc</pElem>
+            <pElem>.</pElem>
+            <pElem>src</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DATADIR="/usr/local/share"</Elem>
+            <Elem>HAVE_CONFIG_H=1</Elem>
+            <Elem>NDEBUG=1</Elem>
+            <Elem>SYSCONFDIR="/usr/local/etc"</Elem>
+            <Elem>_REENTRANT=1</Elem>
+            <Elem>__REGISTER_PREFIX__=</Elem>
+            <Elem>__STRICT_ANSI__=1</Elem>
+            <Elem>__USER_LABEL_PREFIX__=</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="viewer/viewer.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FrameworkTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/FrameworkTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/FrameworkTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wmain" />
+			<Add option="-pedantic-errors" />
+			<Add option="-pedantic" />
+			<Add option="-Wall" />
+			<Add option="-ansi" />
+			<Add directory="/usr/include/libxml2" />
+			<Add directory="/usr/include/SDL" />
+			<Add directory="../src/framework" />
+			<Add directory="../test/framework" />
+		</Compiler>
+		<Linker>
+			<Add library="libSDL" />
+			<Add library="libxml2" />
+		</Linker>
+		<Unit filename="../src/framework/SharpPlus.h" />
+		<Unit filename="../src/framework/System/AApplication.cpp" />
+		<Unit filename="../src/framework/System/AApplication.h" />
+		<Unit filename="../src/framework/System/ADelegate.cpp" />
+		<Unit filename="../src/framework/System/ADelegate.h" />
+		<Unit filename="../src/framework/System/AMarshalByRefObject.cpp" />
+		<Unit filename="../src/framework/System/AMarshalByRefObject.h" />
+		<Unit filename="../src/framework/System/AMulticastDelegate.cpp" />
+		<Unit filename="../src/framework/System/AMulticastDelegate.h" />
+		<Unit filename="../src/framework/System/AValueType.cpp" />
+		<Unit filename="../src/framework/System/AValueType.h" />
+		<Unit filename="../src/framework/System/CBoolean.cpp" />
+		<Unit filename="../src/framework/System/CBoolean.h" />
+		<Unit filename="../src/framework/System/CConsole.cpp" />
+		<Unit filename="../src/framework/System/CConsole.h" />
+		<Unit filename="../src/framework/System/CEnum.cpp" />
+		<Unit filename="../src/framework/System/CEnum.h" />
+		<Unit filename="../src/framework/System/CException.cpp" />
+		<Unit filename="../src/framework/System/CException.h" />
+		<Unit filename="../src/framework/System/CIntPtr.cpp" />
+		<Unit filename="../src/framework/System/CIntPtr.h" />
+		<Unit filename="../src/framework/System/CNotImplementedException.cpp" />
+		<Unit filename="../src/framework/System/CNotImplementedException.h" />
+		<Unit filename="../src/framework/System/CNotSupportedException.cpp" />
+		<Unit filename="../src/framework/System/CNotSupportedException.h" />
+		<Unit filename="../src/framework/System/CNullValue.cpp" />
+		<Unit filename="../src/framework/System/CNullValue.h" />
+		<Unit filename="../src/framework/System/CObject.cpp" />
+		<Unit filename="../src/framework/System/CObject.h" />
+		<Unit filename="../src/framework/System/CSmartPointer.h" />
+		<Unit filename="../src/framework/System/CString.cpp" />
+		<Unit filename="../src/framework/System/CString.h" />
+		<Unit filename="../src/framework/System/CStringSplitOptions.cpp" />
+		<Unit filename="../src/framework/System/CStringSplitOptions.h" />
+		<Unit filename="../src/framework/System/CSystemException.cpp" />
+		<Unit filename="../src/framework/System/CSystemException.h" />
+		<Unit filename="../src/framework/System/CType.cpp" />
+		<Unit filename="../src/framework/System/CType.h" />
+		<Unit filename="../src/framework/System/Collections/Generic/CArray.h" />
+		<Unit filename="../src/framework/System/Collections/Generic/CArray.tcc" />
+		<Unit filename="../src/framework/System/Collections/Generic/CLinkedList.h" />
+		<Unit filename="../src/framework/System/Collections/Generic/CLinkedList.tcc" />
+		<Unit filename="../src/framework/System/Collections/Generic/CList.h" />
+		<Unit filename="../src/framework/System/Collections/Generic/CList.tcc" />
+		<Unit filename="../src/framework/System/ComponentModel/CComponent.cpp" />
+		<Unit filename="../src/framework/System/ComponentModel/CComponent.h" />
+		<Unit filename="../src/framework/System/ComponentModel/IComponent.h" />
+		<Unit filename="../src/framework/System/Diagnostics/CDebug.cpp" />
+		<Unit filename="../src/framework/System/Diagnostics/CDebug.h" />
+		<Unit filename="../src/framework/System/Globalization/CCultureInfo.cpp" />
+		<Unit filename="../src/framework/System/Globalization/CCultureInfo.h" />
+		<Unit filename="../src/framework/System/ICloneable.h" />
+		<Unit filename="../src/framework/System/IDisposable.h" />
+		<Unit filename="../src/framework/System/IFormatProvider.h" />
+		<Unit filename="../src/framework/System/IO/CFileStream.cpp" />
+		<Unit filename="../src/framework/System/IO/CFileStream.h" />
+		<Unit filename="../src/framework/System/IO/CStream.cpp" />
+		<Unit filename="../src/framework/System/IO/CStream.h" />
+		<Unit filename="../src/framework/System/Information/Software/CSdl.cpp" />
+		<Unit filename="../src/framework/System/Information/Software/CSdl.h" />
+		<Unit filename="../src/framework/System/Reflection/CMemberInfo.cpp" />
+		<Unit filename="../src/framework/System/Reflection/CMemberInfo.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/AButtonBase.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/AButtonBase.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/AListControl.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/AListControl.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CButton.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CButton.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CCheckBox.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CCheckBox.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CComboBox.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CComboBox.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CContainerControl.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CContainerControl.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CControl.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CControl.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CForm.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CForm.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CLabel.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CLabel.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CListBox.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CListBox.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CRadioButton.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CRadioButton.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/CScrollableControl.cpp" />
+		<Unit filename="../src/framework/System/Windows/Forms/CScrollableControl.h" />
+		<Unit filename="../src/framework/System/Windows/Forms/IContainerControl.h" />
+		<Unit filename="../src/framework/System/Xml/CXmlDocument.cpp" />
+		<Unit filename="../src/framework/System/Xml/CXmlDocument.h" />
+		<Unit filename="../src/framework/System/Xml/CXmlElement.cpp" />
+		<Unit filename="../src/framework/System/Xml/CXmlElement.h" />
+		<Unit filename="../src/framework/System/Xml/CXmlLinkedNode.cpp" />
+		<Unit filename="../src/framework/System/Xml/CXmlLinkedNode.h" />
+		<Unit filename="../src/framework/System/Xml/CXmlNode.cpp" />
+		<Unit filename="../src/framework/System/Xml/CXmlNode.h" />
+		<Unit filename="../src/framework/System/Xml/CXmlNodeList.cpp" />
+		<Unit filename="../src/framework/System/Xml/CXmlNodeList.h" />
+		<Unit filename="../src/framework/UnitTesting/AAssert.cpp" />
+		<Unit filename="../src/framework/UnitTesting/AAssert.h" />
+		<Unit filename="../src/framework/UnitTesting/ATestClass.cpp" />
+		<Unit filename="../src/framework/UnitTesting/ATestClass.h" />
+		<Unit filename="../src/framework/UnitTesting/ATestRunner.cpp" />
+		<Unit filename="../src/framework/UnitTesting/ATestRunner.h" />
+		<Unit filename="../src/framework/UnitTesting/CAssertFailedException.cpp" />
+		<Unit filename="../src/framework/UnitTesting/CAssertFailedException.h" />
+		<Unit filename="../src/framework/UnitTesting/CConsoleTestRunner.cpp" />
+		<Unit filename="../src/framework/UnitTesting/CConsoleTestRunner.h" />
+		<Unit filename="../src/framework/UnitTesting/CTestContext.cpp" />
+		<Unit filename="../src/framework/UnitTesting/CTestContext.h" />
+		<Unit filename="../src/framework/UnitTesting/CTestMethod.cpp" />
+		<Unit filename="../src/framework/UnitTesting/CTestMethod.h" />
+		<Unit filename="../src/framework/UnitTesting/CTestResult.cpp" />
+		<Unit filename="../src/framework/UnitTesting/CTestResult.h" />
+		<Unit filename="../src/framework/UnitTesting/CUnitTestAssertException.cpp" />
+		<Unit filename="../src/framework/UnitTesting/CUnitTestAssertException.h" />
+		<Unit filename="../test/framework/System/CBooleanTest.cpp" />
+		<Unit filename="../test/framework/System/CBooleanTest.h" />
+		<Unit filename="../test/framework/System/CStringTest.cpp" />
+		<Unit filename="../test/framework/System/CStringTest.h" />
+		<Unit filename="../test/framework/main.cpp" />
+		<Unit filename="../test/framework/main.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
