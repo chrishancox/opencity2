@@ -48,10 +48,10 @@ fi
 dnl ===========================================================================
 dnl Detect the SDL path, with C language
 dnl ===========================================================================
-SDL_VERSION=1.2.12
+SDL_VERSION=2.0
 
 AC_LANG_C
-AM_PATH_SDL($SDL_VERSION, , AC_MSG_ERROR([SDL version $SDL_VERSION not found]))
+AM_PATH_SDL2($SDL_VERSION, , AC_MSG_ERROR([SDL version $SDL_VERSION not found]))
 
 
 dnl ===========================================================================
@@ -74,17 +74,17 @@ dnl Checks for programs.
 dnl ===========================================================================
 dnl Checks for --disable-sdl-mixer argument
 dnl ===========================================================================
-AC_ARG_ENABLE(sdl-mixer,
-        [  --disable-sdl-mixer     disable SDL_mixer linking])
+AC_ARG_ENABLE(sdl2-mixer,
+        [  --disable-sdl2-mixer     disable SDL2_mixer linking])
 
 if test "x$enable_sdl_mixer" = "x"; then
         AC_CHECK_HEADER(SDL_mixer.h, SDL_mixer_h="yes", SDL_mixer_h="no")
-        AC_CHECK_LIB(SDL_mixer, Mix_OpenAudio, SDL_mixer_lib="yes", SDL_mixer_lib="no")
-        AC_MSG_CHECKING(SDL_mixer support)
+        AC_CHECK_LIB(SDL2_mixer, Mix_OpenAudio, SDL_mixer_lib="yes", SDL_mixer_lib="no")
+        AC_MSG_CHECKING(SDL2_mixer support)
 
         if test "x$SDL_mixer_h" = "xyes"; then
                 if test "x$SDL_mixer_lib" = "xyes"; then
-						LIBS="$SDL_LIBS -lSDL_mixer"
+						LIBS="$SDL_LIBS -lSDL2_mixer"
                         AC_DEFINE(OPENCITY_SDL_MIXER, 1, [SDL_Mixer support])
                         AC_MSG_RESULT(yes)
                 else
@@ -95,6 +95,9 @@ if test "x$enable_sdl_mixer" = "x"; then
         fi
 fi
 AM_CONDITIONAL(OPENCITY_SDL_MIXER, test "x$SDL_mixer_h" = "xyes")
+
+AC_CHECK_LIB(SDL2_net, SDLNet_Init, ,
+        AC_MSG_ERROR([SDL_net library required. See FAQ for more information]))
 
 
 dnl ===========================================================================
@@ -173,12 +176,8 @@ dnl AC_CHECK_HEADERS([SDL_ttf.h SDL_image.h SDL_net.h])
 #        AC_MSG_ERROR([SDL_ttf library required. See FAQ for more information]))
 
 
-AC_CHECK_LIB(SDL_image, IMG_Load, ,
-        AC_MSG_ERROR([SDL_image library required. See FAQ for more information]))
-
-
-AC_CHECK_LIB(SDL_net, SDLNet_Init, ,
-        AC_MSG_ERROR([SDL_net library required. See FAQ for more information]))
+AC_CHECK_LIB(SDL2_image, IMG_Load, ,
+        AC_MSG_ERROR([SDL2_image library required. See FAQ for more information]))
 
 # Need for viewer, also dependency of SDL_image
 AC_MSG_CHECKING(for libpng)
@@ -219,10 +218,10 @@ dnl Set more C / C++ compiler options
 CPPFLAGS="-I$with_gl_prefix/include $enable_gprof $enable_debug $CPPFLAGS"
 
 dnl Set specific C compiler flags
-CFLAGS="-std=c99 $CFLAGS"
+CFLAGS="$CFLAGS"
 
 dnl Set specific C++ compiler flags
-CXXFLAGS="-std=c++98 $CXXFLAGS"
+CXXFLAGS="$CXXFLAGS"
 
 dnl Set linker options 
 LDFLAGS="-L$with_gl_prefix/lib $enable_gprof $enable_as_needed $LDFLAGS"

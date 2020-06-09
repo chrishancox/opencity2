@@ -32,6 +32,7 @@ extern GlobalVar gVars;
 
 // Libraries headers
 #include "SDL_image.h"
+#include <GL/glu.h>
 
 // Class static variable implementation
 map<string, pair<GLuint, uint> >	Texture::mmapTextureCache;
@@ -479,12 +480,14 @@ Texture::Building2Texture
 
 // If the image doesn't have the correct size then scale it before converting
 	uint glW, glH;
+#if 0
 	if (Texture::_GetCorrectSize( gVars.guiCityWidth, gVars.guiCityLength, glW, glH )) {
 		OPENCITY_DEBUG("Texture's size has been fixed");
 		void* pPixels = malloc( glW * glH * BYTE_PER_PIXEL );
 		assert( pPixels != NULL );
 
 	// Scale the input image
+   printf("gluScaleImage: %d %d %d %d\n", gVars.guiCityWidth, gVars.guiCityLength, glW, glH);
 		(void)gluScaleImage(
 			GL_RGBA,			// Image format
 			gVars.guiCityWidth,	// The minimap size
@@ -513,7 +516,9 @@ Texture::Building2Texture
 		free( pPixels );
 		pPixels = NULL;			// Safe
 	}
-	else {
+	else
+#endif
+   {
 	// Convert directly the minimap data to the OpenGL texture
 		glTexImage2D(
 			GL_TEXTURE_2D,		// Texture 2D

@@ -61,7 +61,6 @@ struct GlobalVar
 	uint guiMsPerFrame;				///< The number of milliseconds to wait between each frame.
 	uint guiScreenWidth;			///< The current screen's width
 	uint guiScreenHeight;			///< The current screen's height
-	uint guiVideoBpp;				///< The current video bits-per-plane
 	string gsOpenGLDriver;			///< The name of the OpenGL driver
 
 	uint guiGeneratorSeed;
@@ -98,8 +97,8 @@ struct GlobalVar
 	Kernel* gpKernel;
 	Environment* gpEnvironment;
 
-// The SDL video surface
-	SDL_Surface* gpVideoSrf;
+// The SDL2 window
+	SDL_Window* gpWindow;
 };
 
 

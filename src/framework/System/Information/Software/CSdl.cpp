@@ -56,11 +56,12 @@ const String Sdl::GetCompiletimeVersion()
 
 const String Sdl::GetRuntimeVersion()
 {
-	const SDL_version* lpVersion = SDL_Linked_Version();
+	SDL_version lpVersion;
+   SDL_GetVersion(&lpVersion);
 	//assert(lpVersion != NULL);
 
 	String lsStringVersion;
-	lsStringVersion << (short)lpVersion->major << "." << (short)lpVersion->minor << "." << (short)lpVersion->patch;
+	lsStringVersion << (short)lpVersion.major << "." << (short)lpVersion.minor << "." << (short)lpVersion.patch;
 
 	return lsStringVersion;
 }

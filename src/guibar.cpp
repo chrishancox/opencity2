@@ -179,7 +179,7 @@ GUIBar::MouseButton( const SDL_MouseButtonEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUIBar::Expose( const SDL_ExposeEvent& rcEvent )
+GUIBar::Expose( const SDL_WindowEvent& rcEvent )
 {
 	this->Display();
 }
@@ -187,7 +187,7 @@ GUIBar::Expose( const SDL_ExposeEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUIBar::Resize( const SDL_ResizeEvent& rcEvent )
+GUIBar::Resize( const SDL_WindowEvent& rcEvent )
 {}
 
 

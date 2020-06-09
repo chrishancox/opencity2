@@ -210,7 +210,7 @@ GUILabel::MouseButton( const SDL_MouseButtonEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUILabel::Expose( const SDL_ExposeEvent& rcEvent )
+GUILabel::Expose( const SDL_WindowEvent& rcEvent )
 {
 	this->Display();
 }
@@ -218,7 +218,7 @@ GUILabel::Expose( const SDL_ExposeEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUILabel::Resize( const SDL_ResizeEvent& rcEvent )
+GUILabel::Resize( const SDL_WindowEvent& rcEvent )
 {}
 
 

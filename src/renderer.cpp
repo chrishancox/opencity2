@@ -74,6 +74,8 @@ for the first time:
 #include "globalvar.h"
 extern GlobalVar gVars;
 
+#include <GL/glu.h>
+
 
 // OpenGL viewport default parameters
 #define OC_VIEW_ANGLE		50.0
@@ -141,7 +143,7 @@ _uiCityLength( cityL )
 // Initialize the window's size, the viewport
 // and set the perspective's ratio
 	assert( gVars.gpVideoSrf != NULL );
-	Renderer::SetWinSize( gVars.gpVideoSrf->w, gVars.gpVideoSrf->h );
+	Renderer::SetWinSize( gVars.guiScreenWidth, gVars.guiScreenHeight );
 
 // Settle "home" down ;)
 	this->Home();
@@ -545,7 +547,7 @@ Renderer::DisplaySplash(
 	glMatrixMode( GL_PROJECTION );
 	glPushMatrix();
 	glLoadIdentity();
-	gluOrtho2D( 0, _iWinWidth-1, 0, _iWinHeight-1 );
+	glOrtho( 0, _iWinWidth-1, 0, _iWinHeight-1, -1, 1 );
 
 // Display the textured quad
 	glBegin( GL_QUADS );
@@ -837,7 +839,7 @@ Renderer::DisplayText(
 	glMatrixMode( GL_PROJECTION );
 	glPushMatrix();
 	glLoadIdentity();
-	gluOrtho2D( 0, _iWinWidth-1, 0, _iWinHeight-1 );
+	glOrtho( 0, _iWinWidth-1, 0, _iWinHeight-1, -1, 1 );
 
 // Save the list base
 	glTranslatef( .0, .0, .1 );
@@ -1000,6 +1002,45 @@ Renderer::GetSelectedWLFrom
 }
 */
 
+#if 0
+/*=====================================================================*/
+void Renderer::GluPerspective
+( 
+   GLdouble fovY, 
+   GLdouble aspect, 
+   GLdouble zNear, 
+   GLdouble zFar 
+)
+{
+   GLdouble fW, fH;
+
+   fH = tan( (fovY / 2) / 180 * M_PI ) * zNear;
+   fH = tan( fovY / 360 * M_PI ) * zNear;
+   fW = fH * aspect;
+   
+   glFrustum( -fW, fW, -fH, fH, zNear, zFar );
+}
+
+
+/*=====================================================================*/
+void Renderer::GluPickMatrix
+(
+   GLdouble x, 
+   GLdouble y, 
+   GLdouble deltax, 
+   GLdouble deltay, 
+   GLint viewport[4]
+)
+{
+   if (deltax <= 0 || deltay <= 0) { 
+      return;
+   }
+
+   /* Translate and scale the picked region to the entire window */
+   glTranslatef((viewport[2] - 2 * (x - viewport[0])) / deltax, (viewport[3] - 2 * (y - viewport[1])) / deltay, 0);
+   glScalef(viewport[2] / deltax, viewport[3] / deltay, 1.0);
+}
+#endif
 
    /*=====================================================================*/
 const bool
@@ -1641,7 +1682,7 @@ Renderer::_DisplayCompass() const
 	glMatrixMode( GL_PROJECTION );
 	glPushMatrix();
 	glLoadIdentity();
-	gluOrtho2D( 0, _iWinWidth-1, 0, _iWinHeight-1 );
+	glOrtho( 0, _iWinWidth-1, 0, _iWinHeight-1, -1, 1 );
 
 // We save the modelview matrix
 	glMatrixMode( GL_MODELVIEW );
@@ -1749,6 +1790,110 @@ Renderer::_PrepareView()
 	glMultMatrixd( _dmatrixRotate );
 }
 
+#if 0
+static void __gluMultMatrixVecd(const GLdouble matrix[16], const GLdouble in[4],
+      GLdouble out[4])
+{
+   int i;
+
+   for (i=0; i<4; i++) {
+      out[i] = 
+         in[0] * matrix[0*4+i] +
+         in[1] * matrix[1*4+i] +
+         in[2] * matrix[2*4+i] +
+         in[3] * matrix[3*4+i];
+   }
+}
+
+/*
+ * ** Invert 4x4 matrix.
+ * ** Contributed by David Moore (See Mesa bug #6748)
+ * */
+static int __gluInvertMatrixd(const GLdouble m[16], GLdouble invOut[16])
+{
+   double inv[16], det;
+   int i;
+
+   inv[0] =   m[5]*m[10]*m[15] - m[5]*m[11]*m[14] - m[9]*m[6]*m[15]
+      + m[9]*m[7]*m[14] + m[13]*m[6]*m[11] - m[13]*m[7]*m[10];
+   inv[4] =  -m[4]*m[10]*m[15] + m[4]*m[11]*m[14] + m[8]*m[6]*m[15]
+      - m[8]*m[7]*m[14] - m[12]*m[6]*m[11] + m[12]*m[7]*m[10];
+   inv[8] =   m[4]*m[9]*m[15] - m[4]*m[11]*m[13] - m[8]*m[5]*m[15]
+      + m[8]*m[7]*m[13] + m[12]*m[5]*m[11] - m[12]*m[7]*m[9];
+   inv[12] = -m[4]*m[9]*m[14] + m[4]*m[10]*m[13] + m[8]*m[5]*m[14]
+      - m[8]*m[6]*m[13] - m[12]*m[5]*m[10] + m[12]*m[6]*m[9];
+   inv[1] =  -m[1]*m[10]*m[15] + m[1]*m[11]*m[14] + m[9]*m[2]*m[15]
+      - m[9]*m[3]*m[14] - m[13]*m[2]*m[11] + m[13]*m[3]*m[10];
+   inv[5] =   m[0]*m[10]*m[15] - m[0]*m[11]*m[14] - m[8]*m[2]*m[15]
+      + m[8]*m[3]*m[14] + m[12]*m[2]*m[11] - m[12]*m[3]*m[10];
+   inv[9] =  -m[0]*m[9]*m[15] + m[0]*m[11]*m[13] + m[8]*m[1]*m[15]
+      - m[8]*m[3]*m[13] - m[12]*m[1]*m[11] + m[12]*m[3]*m[9];
+   inv[13] =  m[0]*m[9]*m[14] - m[0]*m[10]*m[13] - m[8]*m[1]*m[14]
+      + m[8]*m[2]*m[13] + m[12]*m[1]*m[10] - m[12]*m[2]*m[9];
+   inv[2] =   m[1]*m[6]*m[15] - m[1]*m[7]*m[14] - m[5]*m[2]*m[15]
+      + m[5]*m[3]*m[14] + m[13]*m[2]*m[7] - m[13]*m[3]*m[6];
+   inv[6] =  -m[0]*m[6]*m[15] + m[0]*m[7]*m[14] + m[4]*m[2]*m[15]
+      - m[4]*m[3]*m[14] - m[12]*m[2]*m[7] + m[12]*m[3]*m[6];
+   inv[10] =  m[0]*m[5]*m[15] - m[0]*m[7]*m[13] - m[4]*m[1]*m[15]
+      + m[4]*m[3]*m[13] + m[12]*m[1]*m[7] - m[12]*m[3]*m[5];
+   inv[14] = -m[0]*m[5]*m[14] + m[0]*m[6]*m[13] + m[4]*m[1]*m[14]
+      - m[4]*m[2]*m[13] - m[12]*m[1]*m[6] + m[12]*m[2]*m[5];
+   inv[3] =  -m[1]*m[6]*m[11] + m[1]*m[7]*m[10] + m[5]*m[2]*m[11]
+      - m[5]*m[3]*m[10] - m[9]*m[2]*m[7] + m[9]*m[3]*m[6];
+   inv[7] =   m[0]*m[6]*m[11] - m[0]*m[7]*m[10] - m[4]*m[2]*m[11]
+      + m[4]*m[3]*m[10] + m[8]*m[2]*m[7] - m[8]*m[3]*m[6];
+   inv[11] = -m[0]*m[5]*m[11] + m[0]*m[7]*m[9] + m[4]*m[1]*m[11]
+      - m[4]*m[3]*m[9] - m[8]*m[1]*m[7] + m[8]*m[3]*m[5];
+   inv[15] =  m[0]*m[5]*m[10] - m[0]*m[6]*m[9] - m[4]*m[1]*m[10]
+      + m[4]*m[2]*m[9] + m[8]*m[1]*m[6] - m[8]*m[2]*m[5];
+
+   det = m[0]*inv[0] + m[1]*inv[4] + m[2]*inv[8] + m[3]*inv[12];
+   if (det == 0)
+      return GL_FALSE;
+
+   det = 1.0 / det;
+
+   for (i = 0; i < 16; i++)
+      invOut[i] = inv[i] * det;
+
+   return GL_TRUE;
+}
+
+GLint
+gluProject(GLdouble objx, GLdouble objy, GLdouble objz, 
+      const GLdouble modelMatrix[16], 
+      const GLdouble projMatrix[16],
+      const GLint viewport[4],
+      GLdouble *winx, GLdouble *winy, GLdouble *winz)
+{
+   double in[4];
+   double out[4];
+
+   in[0]=objx;
+   in[1]=objy;
+   in[2]=objz;
+   in[3]=1.0;
+   __gluMultMatrixVecd(modelMatrix, in, out);
+   __gluMultMatrixVecd(projMatrix, out, in);
+   if (in[3] == 0.0) return(GL_FALSE);
+   in[0] /= in[3];
+   in[1] /= in[3];
+   in[2] /= in[3];
+   /* Map x, y and z to range 0-1 */
+   in[0] = in[0] * 0.5 + 0.5;
+   in[1] = in[1] * 0.5 + 0.5;
+   in[2] = in[2] * 0.5 + 0.5;
+
+   /* Map x,y to viewport */
+   in[0] = in[0] * viewport[2] + viewport[0];
+   in[1] = in[1] * viewport[3] + viewport[1];
+
+   *winx=in[0];
+   *winy=in[1];
+   *winz=in[2];
+   return(GL_TRUE);
+}
+#endif
 
    /*=====================================================================*/
 void

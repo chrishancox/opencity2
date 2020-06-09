@@ -137,7 +137,7 @@ extern GlobalVar gVars;
 	static bool bRestart		= false;
 
 /// Flags we will pass into SDL_SetVideoMode.
-	static int iVideoFlag		= SDL_OPENGL;
+	static int iVideoFlag		= SDL_WINDOW_OPENGL;
 
 /// The paths are static so that the others can not access this
 	static string sDataDir		= "";
@@ -203,23 +203,24 @@ void ocMouseMotion( const SDL_MouseMotionEvent& motionEvent )
 
 
    /*=====================================================================*/
-void ocResize( const SDL_ResizeEvent& rcsResizeEvent)
+void ocResize( const SDL_WindowEvent& rcsResizeEvent)
 {
 #ifndef __WIN32__
 // Linux needs this whereas Win32 does not
 // Set the new window's size
-	if( SDL_SetVideoMode(
-		rcsResizeEvent.w, rcsResizeEvent.h,
-		gVars.guiVideoBpp, iVideoFlag ) == 0 ) {
-		OPENCITY_FATAL( "Video mode reset failed: " << SDL_GetError( ) );
-		exit( OC_ERROR_SDL_VIDEORESIZE );
-	}
-	gVars.gpVideoSrf = SDL_GetVideoSurface();
+//FIXME SDL2 migration: must check if really needed. 
+//	if( SDL_SetVideoMode(
+//		rcsResizeEvent.w, rcsResizeEvent.h,
+//		gVars.guiVideoBpp, iVideoFlag ) == 0 ) {
+//		OPENCITY_FATAL( "Video mode reset failed: " << SDL_GetError( ) );
+//		exit( OC_ERROR_SDL_VIDEORESIZE );
+//	}
+//	gVars.gpVideoSrf = SDL_GetWindowSurface();
 #endif
 
 // Save the new screen size
-	gVars.guiScreenWidth = rcsResizeEvent.w;
-	gVars.guiScreenHeight = rcsResizeEvent.h;
+	gVars.guiScreenWidth = rcsResizeEvent.data1;
+	gVars.guiScreenHeight = rcsResizeEvent.data2;
 
 	if (uipCurrentUI != NULL) {
 		uipCurrentUI->Resize( rcsResizeEvent );
@@ -228,18 +229,20 @@ void ocResize( const SDL_ResizeEvent& rcsResizeEvent)
 
 
    /*=====================================================================*/
-void ocActive( const SDL_ActiveEvent & e)
+void ocActive( const SDL_WindowEvent & e)
 {
 //	OPENCITY_DEBUG( "Active event received" );
 
-	if (e.state & SDL_APPACTIVE) {
-		gVars.gboolActive = (e.gain == 1);
-	}
+	if (e.event == SDL_WINDOWEVENT_SHOWN) {
+		gVars.gboolActive = true;
+	} else if(e.event == SDL_WINDOWEVENT_HIDDEN) {
+		gVars.gboolActive = false;
+   }
 }
 
 
    /*=====================================================================*/
-void ocExpose( const SDL_ExposeEvent& rcsExposeEvent )
+void ocExpose( const SDL_WindowEvent& rcsExposeEvent )
 {
 	if (uipCurrentUI != NULL) {
 		uipCurrentUI->Expose( rcsExposeEvent );
@@ -270,17 +273,20 @@ void ocProcessSDLEvents( void )
 			ocMouseButton( event.button );
 			break;
 
-		case SDL_VIDEORESIZE:
-			ocResize( event.resize );
-			break;
-
-		case SDL_ACTIVEEVENT:
-			ocActive( event.active );
-			break;
-
-		case SDL_VIDEOEXPOSE:
-			ocExpose( event.expose );
-			break;
+		case SDL_WINDOWEVENT:
+         switch( event.window.event ) {
+            case SDL_WINDOWEVENT_RESIZED:
+  			      ocResize( event.window );
+			      break;
+            case SDL_WINDOWEVENT_SHOWN:
+            case SDL_WINDOWEVENT_HIDDEN:
+			      ocActive( event.window );
+   			   break;
+            case SDL_WINDOWEVENT_EXPOSED:
+			      ocExpose( event.window );
+   			   break;
+         }
+         break;
 
 		case SDL_QUIT:
 		// Handle quit requests (like Ctrl-c).
@@ -308,10 +314,6 @@ static int initSDL()
 		OPENCITY_FATAL( "SDL video initialization failed: " << SDL_GetError() );
 		return OC_ERROR_SDL_INIT;
 	}
-
-// Set the window's caption
-	SDL_WM_SetCaption( PACKAGE " " VERSION, NULL );
-	SDL_WM_SetIcon( IMG_Load(ocDataDirPrefix("graphism/icon/OpenCity32.png").c_str()), NULL );
 
 // Set the SDL_GL_DOUBLEBUFFER attribute for smoother rendering
 	SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
@@ -341,47 +343,54 @@ static int initSDL()
 	}
 
 // Will we go for fullscreen ?
+// FIXME: readd
 	if (gVars.gboolFullScreen == true) {
-		iVideoFlag |= SDL_FULLSCREEN;
+		iVideoFlag |= SDL_WINDOW_FULLSCREEN;
 
 	// Use the current desktop video resolution
 		gVars.guiScreenWidth	= 0;
 		gVars.guiScreenHeight	= 0;
 	}
 	else {
-		iVideoFlag |= SDL_RESIZABLE;
+		iVideoFlag |= SDL_WINDOW_RESIZABLE;
 	}
 
-// OK, go for the video settings now
-	gVars.gpVideoSrf = SDL_SetVideoMode( gVars.guiScreenWidth, gVars.guiScreenHeight, gVars.guiVideoBpp, iVideoFlag );
-	if ( gVars.gpVideoSrf == NULL ) {
+// OK, go for the video (main window) settings now
+   gVars.gpWindow = SDL_CreateWindow( PACKAGE " " VERSION, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, gVars.guiScreenWidth, gVars.guiScreenHeight, iVideoFlag );
+	if ( gVars.gpWindow == NULL ) {
 	// This could happen for a variety of reasons, including DISPLAY
 	// not being set, the specified resolution not being available, etc.
 		OPENCITY_ERROR(
-			"Initialization of " << gVars.guiVideoBpp <<
-			" bpp video mode failed: " << SDL_GetError()
+			"Initialization of video mode failed: " << SDL_GetError()
 		);
 		return OC_ERROR_SDL_INIT;
 	}
 	else {
+      // set GL context to the window
+      SDL_GL_CreateContext(gVars.gpWindow);
+
+      int windowWidth=0;
+      int windowHeight=0;
+      SDL_GetWindowSize(gVars.gpWindow, &windowWidth, &windowHeight);
 		OPENCITY_INFO(
-			"Using " << (uint)gVars.gpVideoSrf->w <<
-			"x" << (uint)gVars.gpVideoSrf->h <<
-			" at " << (uint)gVars.gpVideoSrf->format->BitsPerPixel << " bpp"
+			"Using " << windowWidth << "x" << windowHeight
 		);
 
 	// Store the fullscreen resolution for later use
 		if (gVars.gboolFullScreen == true) {
-			gVars.guiScreenWidth	= (uint)gVars.gpVideoSrf->w;
-			gVars.guiScreenHeight	= (uint)gVars.gpVideoSrf->h;
+			gVars.guiScreenWidth	= (uint)windowWidth;
+			gVars.guiScreenHeight	= (uint)windowHeight;
 		}
 	}
 
+   // Set the window's icons
+	SDL_SetWindowIcon( gVars.gpWindow, IMG_Load(ocDataDirPrefix("graphism/icon/OpenCity32.png").c_str()) );
+
+
 // Retrieve the video driver name
-	#define BUFFER_SIZE 256
-	char myBuffer[BUFFER_SIZE];
-	if (SDL_VideoDriverName(myBuffer, BUFFER_SIZE) != NULL) {
-		OPENCITY_INFO( "Current video driver: " << myBuffer );
+   const char* videoDriverName = SDL_GetCurrentVideoDriver();
+	if ( videoDriverName != NULL) {
+		OPENCITY_INFO( "Current video driver: " << videoDriverName );
 	}
 	else {
 		OPENCITY_ERROR( "Failed to retrieve the video driver name" );
@@ -660,10 +669,10 @@ static void displayStatus( const string & str )
 	displaySplash();
 
 // Center the text on the screen
-	x = (gVars.gpVideoSrf->w - str.size()*10)/2;
-	y = (gVars.gpVideoSrf->h - 140) / 2;
+	x = (gVars.guiScreenWidth - str.size()*10)/2;
+	y = (gVars.guiScreenHeight - 140) / 2;
 	gVars.gpRenderer->DisplayText( x, y, OC_BLUE_COLOR, str );
-	SDL_GL_SwapBuffers();
+	SDL_GL_SwapWindow(gVars.gpWindow);
 }
 
 
@@ -671,7 +680,7 @@ static void displayStatus( const string & str )
 static int clientMode()
 {
 // Initialize SDL
-	if (gVars.gpVideoSrf == NULL) {
+	if (gVars.gpWindow == NULL) {
 		int errorCode = initSDL();
 		if (errorCode != 0) {
 			return errorCode;
@@ -762,7 +771,7 @@ located in OpenCity executable directory.",
 
 
 // The pointer of our new city
-	City* pNewCity = new City( gVars.guiCityWidth, gVars.guiCityLength );
+	City* pNewCity = new City( gVars.gpWindow, gVars.guiCityWidth, gVars.guiCityLength );
 	if (pNewCity == NULL) {
 		OPENCITY_FATAL( "Error while creating new city" );
 		return OC_ERROR_MEMORY;
@@ -810,7 +819,7 @@ located in OpenCity executable directory.",
 				gVars.guiGeneratorSeed
 			);
 			gVars.gpMapMgr = new Map( gVars.guiCityWidth, gVars.guiCityLength );
-			pNewCity = new City( gVars.guiCityWidth, gVars.guiCityLength );
+			pNewCity = new City( gVars.gpWindow, gVars.guiCityWidth, gVars.guiCityLength );
 			if (pNewCity == NULL) {
 				OPENCITY_FATAL( "Error while creating new city" );
 				return OC_ERROR_MEMORY;
@@ -834,6 +843,7 @@ located in OpenCity executable directory.",
 
 #undef OC_PRINT_FPS
 #ifndef OC_PRINT_FPS
+      SDL_GL_SwapWindow( gVars.gpWindow );
 		SDL_Delay( gVars.guiMsPerFrame );
 #else
 		static Uint32 uiNumberTick = SDL_GetTicks();
@@ -877,8 +887,7 @@ located in OpenCity executable directory.",
 // delete the simulators' mutex now
 	SDL_DestroyMutex( gVars.gpmutexSim );
 
-//	SDL_FreeSurface( gVars.gpVideoSrf ); // This is not recommended by SDL documentation
-	gVars.gpVideoSrf = NULL;
+	gVars.gpWindow = NULL;
 
 	SDL_Quit();					// WARNING: Calls free() on an invalid pointer. Detected by glibc
 
@@ -1157,7 +1166,6 @@ static void initGlobalVar()
 	gVars.guiMsPerFrame				= OC_MS_PER_FRAME;
 	gVars.guiScreenWidth			= OC_WINDOW_WIDTH;
 	gVars.guiScreenHeight			= OC_WINDOW_HEIGHT;
-	gVars.guiVideoBpp				= OC_WINDOW_BPP_DEFAULT;
 	gVars.gsOpenGLDriver			= "";
 
 	gVars.gsGeneratorHeightMap			= "";
@@ -1193,8 +1201,8 @@ static void initGlobalVar()
 	gVars.gpKernel					= NULL;		// global MAS Kernel
 	gVars.gpEnvironment				= NULL;		// global Environement class
 
-// The SDL video surface
-	gVars.gpVideoSrf				= NULL;		// global video screen surface
+// The SDL window
+	gVars.gpWindow				= NULL;		// global video screen surface
 }
 
 
