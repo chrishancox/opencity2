@@ -151,8 +151,7 @@ public:
 		uint & ruiL,
 		const Map* pcMap,
 		const Layer* pcLayer );
-
-
+   
 	const bool
 	GetSelectedWLFrom(
 		const uint & rcuiMouseX,

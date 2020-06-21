@@ -32,7 +32,7 @@ _pServerSocket( NULL )
 	_boolNetworkInitialized = (SDLNet_Init() != -1);
 	if (_boolNetworkInitialized == false) {
 		cerr << "WARNING: I couldn't initialize networking. "
-			 << "The error was: " << SDLNet_GetError() << endl;
+			 << "The error was: " << SDL_GetError() << endl;
 	}
 }
 
@@ -205,7 +205,7 @@ Networking::StartServer( const OC_USHORT port )
 	IPaddress ip;
 	if (SDLNet_ResolveHost(&ip, NULL, port) == -1) {
 		cerr << "ERROR: I couldn't start the server: "
-			 << SDLNet_GetError() << endl;
+			 << SDL_GetError() << endl;
 		return OC_NET_ERROR;
 	}
 
@@ -213,7 +213,7 @@ Networking::StartServer( const OC_USHORT port )
 	this->_pServerSocket = SDLNet_TCP_Open(&ip);
 	if (_pServerSocket == NULL) {
 		cerr << "ERROR: I couldn't open the server's socket: "
-			 << SDLNet_GetError() << endl;
+			 << SDL_GetError() << endl;
 		return OC_NET_ERROR;
 	}
 
@@ -221,7 +221,7 @@ Networking::StartServer( const OC_USHORT port )
 	this->_pSocketSet = SDLNet_AllocSocketSet(OC_NET_CLIENT_MAX);
 	if (this->_pSocketSet == NULL) {
 		cerr << "ERROR: I couldn't allocate a socket set: "
-			 << SDLNet_GetError() << endl;
+			 << SDL_GetError() << endl;
 		return OC_NET_ERROR;
 	}
 
@@ -318,7 +318,7 @@ Networking::Open(
 	IPaddress ip;
 	if (SDLNet_ResolveHost(&ip, serverHost.c_str(), port) == -1) {
 		cerr << "ERROR: I couldn't resolve the server name: "
-			 << SDLNet_GetError() << endl;
+			 << SDL_GetError() << endl;
 		return OC_NET_ERROR;
 	}
 
@@ -326,7 +326,7 @@ Networking::Open(
 	this->_pServerSocket = SDLNet_TCP_Open(&ip);
 	if (_pServerSocket == NULL) {
 		cerr << "ERROR: I couldn't connect to the server: "
-			 << SDLNet_GetError() << endl;
+			 << SDL_GetError() << endl;
 		return OC_NET_ERROR;
 	}
 

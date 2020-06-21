@@ -52,10 +52,12 @@ using namespace std;
    /*=====================================================================*/
 City::City
 (
+   SDL_Window* pWindow,
 	const uint width,
 	const uint length,
 	const bool bGUIEnabled
 ):
+_pWindow( pWindow),
 _bGUIEnabled( bGUIEnabled ),
 _bStatusVisible( true ),
 _uiIncome( 0 ),
@@ -397,7 +399,7 @@ cityrun_swap:
 		_pctrMenu->Display();
 
 // Swap the buffers and update the screen
-	SDL_GL_SwapBuffers();
+   SDL_GL_SwapWindow(_pWindow);
 }
 
 
@@ -831,7 +833,7 @@ City::MouseButton( const SDL_MouseButtonEvent& rcsMBE )
 
    /*=====================================================================*/
 void
-City::Expose( const SDL_ExposeEvent& rcEvent )
+City::Expose( const SDL_WindowEvent& rcEvent )
 {
 	OPENCITY_DEBUG( "Expose event received" );
 
@@ -842,18 +844,18 @@ City::Expose( const SDL_ExposeEvent& rcEvent )
 		_pctrMenu->Expose( rcEvent );
 	}
 
-	SDL_GL_SwapBuffers();
+	SDL_GL_SwapWindow(_pWindow);
 }
 
 
    /*=====================================================================*/
-void City::Resize( const SDL_ResizeEvent& rcEvent )
+void City::Resize( const SDL_WindowEvent& rcEvent )
 {
 	OPENCITY_DEBUG( "Resize event received" );
 
 // Set the new window's size
-	_iWinWidth = rcEvent.w;
-	_iWinHeight = rcEvent.h;
+	_iWinWidth = rcEvent.data1;
+	_iWinHeight = rcEvent.data2;
 	gVars.gpRenderer->SetWinSize( _iWinWidth, _iWinHeight );
 
 // Resize the main status bar and reposition it
@@ -930,7 +932,7 @@ void City::_CreateSimulator()
 	_pMSim = new MainSim( gVars.gpmutexSim, (BuildingLayer*)_apLayer[ OC_LAYER_BUILDING ], gVars.gpMapMgr );
 
 // Now initialize simulators threads
-	_pthreadMSim = SDL_CreateThread( Simulator::ThreadWrapper, _pMSim );
+	_pthreadMSim = SDL_CreateThread( Simulator::ThreadWrapper, "SimThread", _pMSim );
 
 // Kept for future reference
 // How can I put funcTSim into the TrafficSim class ?
@@ -2095,7 +2097,7 @@ City::_HandleMouseXY()
 	static int mouseX, mouseY;
 
 // return immediately if the app doesn't have mouse focus
-	if (!(SDL_GetAppState() & SDL_APPMOUSEFOCUS ))
+	if (!(SDL_GetWindowFlags(_pWindow) & SDL_WINDOW_MOUSE_FOCUS ))
 		return;
 
 	SDL_GetMouseState( &mouseX, &mouseY );

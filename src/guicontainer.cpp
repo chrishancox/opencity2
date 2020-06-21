@@ -201,7 +201,7 @@ GUIContainer::Display() const
 	glPushMatrix();
 	glLoadIdentity();
 // Use the orthonormal projection
-	gluOrtho2D( 0, _uiWinWidth-1, 0, _uiWinHeight-1 );
+   glOrtho(0.0f, _uiWinWidth-1, 0.0f, _uiWinHeight-1, -1, 1);
 
 // Store the old matrix and move the container to the correct position
 	glMatrixMode( GL_MODELVIEW );
@@ -288,7 +288,7 @@ GUIContainer::MouseButton( const SDL_MouseButtonEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUIContainer::Expose( const SDL_ExposeEvent& rcEvent )
+GUIContainer::Expose( const SDL_WindowEvent& rcEvent )
 {
 	this->Display();
 }
@@ -296,10 +296,10 @@ GUIContainer::Expose( const SDL_ExposeEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUIContainer::Resize( const SDL_ResizeEvent& rcEvent )
+GUIContainer::Resize( const SDL_WindowEvent& rcEvent )
 {
-	_uiWinWidth = rcEvent.w;
-	_uiWinHeight = rcEvent.h;
+	_uiWinWidth = rcEvent.data1;
+	_uiWinHeight = rcEvent.data2;
 }
 
 

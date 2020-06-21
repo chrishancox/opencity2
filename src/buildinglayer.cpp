@@ -868,11 +868,11 @@ BuildingLayer::MouseButton( const SDL_MouseButtonEvent& rcEvent )
 {}
 
 void
-BuildingLayer::Expose( const SDL_ExposeEvent& rcEvent )
+BuildingLayer::Expose( const SDL_WindowEvent& rcEvent )
 {}
 
 void
-BuildingLayer::Resize( const SDL_ResizeEvent& rcEvent )
+BuildingLayer::Resize( const SDL_WindowEvent& rcEvent )
 {}
 
 

@@ -21,11 +21,11 @@
 /* Define to 1 if you have the `pthread' library (-lpthread). */
 #undef HAVE_LIBPTHREAD
 
-/* Define to 1 if you have the `SDL_image' library (-lSDL_image). */
-#undef HAVE_LIBSDL_IMAGE
+/* Define to 1 if you have the `SDL2_image' library (-lSDL2_image). */
+#undef HAVE_LIBSDL2_IMAGE
 
-/* Define to 1 if you have the `SDL_net' library (-lSDL_net). */
-#undef HAVE_LIBSDL_NET
+/* Define to 1 if you have the `SDL2_net' library (-lSDL2_net). */
+#undef HAVE_LIBSDL2_NET
 
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H

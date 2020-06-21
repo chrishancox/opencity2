@@ -36,7 +36,7 @@ Required OpenGL extensions:
 	GL_EXT_texture3D
 
 Sound card:
-	anything that can work with SDL_mixer
+	anything that can work with SDL2_mixer
 
 Network:
 	experimental support
@@ -60,10 +60,10 @@ Graphic User Interface:
 Libraries:
 	GL (OpenGL)
 	GLU
-	SDL
-	SDL_image
-	SDL_net
-	SDL_mixer (optional)
+	SDL2
+	SDL2_image
+	SDL2_net
+	SDL2_mixer (optional)
 
 
 ------------------------------------------------------------------------------
@@ -141,8 +141,8 @@ Undocumented features, try it at your own risks:
 ------------------------------------------------------------------------------
 Sound & music
 ------------------------------------------------------------------------------
-	OpenCity uses SDL_mixer for playing sound & music. Thus, it supports
-all file types that SDL_mixer supports.
+	OpenCity uses SDL2_mixer for playing sound & music. Thus, it supports
+all file types that SDL2_mixer supports.
 
 	If you don't hear any sound, try to modify "sound.m3u" and
 set the path accordingly to the "opencity" executable file. Please note
@@ -154,8 +154,8 @@ files.
 and OpenCity will load and play your favorite musics. If you don't find
 any "music" directory just create it then put your list "music.m3u" in it.
 
-	I'd like to warn you that SDL_mixer is not that stable. It can hang
-OpenCity while playing few kinds of ".mp3" song. Blame the SDL_mixer's 
+	I'd like to warn you that SDL2_mixer is not that stable. It can hang
+OpenCity while playing few kinds of ".mp3" song. Blame the SDL2_mixer's 
 guys not me ;) If you experience such a problem, just turn the music 
 off (key 'm').
 

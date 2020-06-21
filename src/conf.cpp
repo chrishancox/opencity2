@@ -32,7 +32,7 @@ Conf::Open( const string& fileName )
 	std::ifstream inFile( fileName.c_str() );
 
 // Is the file opened ?
-	if ( inFile == NULL ) {
+	if ( !inFile ) {
 		OPENCITY_DEBUG( "WARNING: File open error, see below: " );
 		OPENCITY_DEBUG( fileName.c_str() );
 		return OC_ERR_FILE;

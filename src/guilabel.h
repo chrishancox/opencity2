@@ -89,8 +89,8 @@ and it can not be changed.
 	void Keyboard( const SDL_KeyboardEvent& rcEvent );
 	void MouseMotion( const SDL_MouseMotionEvent& rcEvent );
 	void MouseButton( const SDL_MouseButtonEvent& rcEvent );
-	void Expose( const SDL_ExposeEvent& rcEvent );
-	void Resize( const SDL_ResizeEvent& rcEvent );
+	void Expose( const SDL_WindowEvent& rcEvent );
+	void Resize( const SDL_WindowEvent& rcEvent );
 
 
 private:

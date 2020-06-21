@@ -222,7 +222,7 @@ GUIButton::MouseButton( const SDL_MouseButtonEvent& buttonEvent )
 
    /*=====================================================================*/
 void
-GUIButton::Expose( const SDL_ExposeEvent& rcEvent )
+GUIButton::Expose( const SDL_WindowEvent& rcEvent )
 {
 	this->Display();
 }
@@ -230,7 +230,7 @@ GUIButton::Expose( const SDL_ExposeEvent& rcEvent )
 
    /*=====================================================================*/
 void
-GUIButton::Resize( const SDL_ResizeEvent& rcEvent )
+GUIButton::Resize( const SDL_WindowEvent& rcEvent )
 {
 }
 

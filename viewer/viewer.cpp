@@ -35,9 +35,12 @@
 #include "pngfuncs.h"
 #include "SimpleOpt.h"			// Simple command line argument parser
 
+#include <GL/glu.h>
 
 int W = 640;
 int H = 480;
+
+SDL_Window* window;
 
 /* floats for x rotation, y rotation, z rotation */
 float xrot=30, yrot=30, zrot=0, zoom=3;
@@ -90,7 +93,7 @@ void DrawGLScene( float width, float length, float height, const Model *model )
 	model->DisplayList( -width/2, -length/2, tabY );
 
 	// swap buffers to display, since we're double buffered.
-	SDL_GL_SwapBuffers();
+	SDL_GL_SwapWindow(window);
 }
 
 
@@ -259,7 +262,10 @@ string parseArgLine( int argc, char **argv, bool *shot )
 int initDisplay( const uint w, const uint h )
 {
 	/* Create a OpenGL screen */
-	if ( SDL_SetVideoMode( w, h, 24, SDL_OPENGLBLIT | SDL_HWSURFACE | SDL_DOUBLEBUF | SDL_RESIZABLE ) == NULL )
+   window = SDL_CreateWindow("Viewe", SDL_WINDOWPOS_UNDEFINED,
+         SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_OPENGL);
+
+	if ( window == NULL) 
 	{
 		fprintf( stderr, "Unable to create OpenGL screen: %s\n", SDL_GetError() );
 		SDL_Quit();
@@ -425,13 +431,17 @@ int main( int argc, char **argv )
 								redraw=false;
 	    					};
 						break;
-		    			case SDL_VIDEOEXPOSE:
-						redraw = true;
-						break;
-					case SDL_VIDEORESIZE:
-						W = event.resize.w;
-						H = event.resize.h;
-					    	initDisplay( W, H );
+                  case SDL_WINDOWEVENT:
+                     switch(event.window.event) {
+                        case SDL_WINDOWEVENT_SHOWN:
+                           redraw = true;
+                        break;
+                        case SDL_WINDOWEVENT_RESIZED:
+                           W = event.window.data1;
+                           H = event.window.data2;
+                        break;
+                     }
+                  break;
 					default: ;
 				}
 			}

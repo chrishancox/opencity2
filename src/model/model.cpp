@@ -126,9 +126,9 @@ Model::DisplayList
 
 	// Correct for a 1x1 model
 	GLdouble matrix[16] = {
-		1,tabY[3]-tabY[0],0,0,
+		1,(GLdouble)tabY[3]-tabY[0],0,0,
 		0,1,0,0,
-		0,tabY[1]-tabY[0],1,0,
+		0,(GLdouble)tabY[1]-tabY[0],1,0,
 		0,0,0,1
 	};
 	glMultMatrixd(matrix);

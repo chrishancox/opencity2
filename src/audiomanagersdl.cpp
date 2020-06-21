@@ -485,7 +485,7 @@ AudioManager::ParseM3UList(
 
 // Open the ifstream for reading
 	std::ifstream listFile( csrFilename.c_str() );
-	if (listFile == NULL) {
+	if (!listFile) {
 		OPENCITY_DEBUG( "Audio file list open error" );
 		return OC_ERR_SOMETHING;
 	}

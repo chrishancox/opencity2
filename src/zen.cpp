@@ -98,13 +98,16 @@ extern GlobalVar gVars;
 
 
    /*=====================================================================*/
-void ocActive( const SDL_ActiveEvent & e)
+void ocActive( const SDL_WindowEvent & e)
 {
 	OPENCITY_DEBUG( "Active event received" );
 
-	if (e.state & SDL_APPACTIVE) {
-		gVars.gboolActive = (e.gain == 1);
-	}
+   if (e.event == SDL_WINDOWEVENT_SHOWN) {
+      gVars.gboolActive = true;
+   } else if(e.event == SDL_WINDOWEVENT_HIDDEN) {
+      gVars.gboolActive = false;
+   }
+
 }
 
 
@@ -136,8 +139,11 @@ void ocProcessSDLEvents( void )
 	while( SDL_PollEvent( &event ) ) {
 
 		switch( event.type ) {
-		case SDL_ACTIVEEVENT:
-			ocActive( event.active );
+		case SDL_WINDOWEVENT:
+         if( (event.window.event == SDL_WINDOWEVENT_SHOWN) ||
+             (event.window.event == SDL_WINDOWEVENT_HIDDEN) ) {
+   			ocActive( event.window );
+         }
 			break;
 
 		case SDL_QUIT:
@@ -307,7 +313,7 @@ int serverMode()
 
 
 // Create a new city map
-	City* pNewCity = new City( gVars.guiCityWidth, gVars.guiCityLength, false );
+	City* pNewCity = new City( gVars.gpWindow, gVars.guiCityWidth, gVars.guiCityLength, false );
 	if (pNewCity == NULL) {
 		OPENCITY_FATAL( "Error while creating new city" );
 		return (-15);
@@ -354,7 +360,7 @@ int serverMode()
 // Delete the simulators' mutex now
 	SDL_DestroyMutex( gVars.gpmutexSim );
 
-	gVars.gpVideoSrf = NULL;
+	gVars.gpWindow = NULL;
 	SDL_Quit();					// WARNING: Calls free() on an invalid pointer. Detected by glibc
 	return 0;
 }
@@ -585,7 +591,6 @@ void initGlobalVar()
 	gVars.guiMsPerFrame				= OC_MS_PER_FRAME;
 	gVars.guiScreenWidth			= OC_WINDOW_WIDTH;
 	gVars.guiScreenHeight			= OC_WINDOW_HEIGHT;
-	gVars.guiVideoBpp				= OC_WINDOW_BPP_DEFAULT;
 
 	gVars.gsGeneratorHeightMap			= "";
 	gVars.guiGeneratorSeed				= time(NULL);
@@ -620,8 +625,8 @@ void initGlobalVar()
 	gVars.gpKernel					= NULL;		// global MAS Kernel
 	gVars.gpEnvironment				= NULL;		// global Environement class
 
-// The SDL video surface
-	gVars.gpVideoSrf				= NULL;		// global video screen surface
+// The SDL window
+	gVars.gpWindow				= NULL;		// global video screen surface
 }
 
 

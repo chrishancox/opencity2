@@ -64,7 +64,7 @@ clicks or releases
 	\param rcsEvent The SDL expose event
 */
 	virtual void
-	Expose( const SDL_ExposeEvent& rcEvent ) = 0;
+	Expose( const SDL_WindowEvent& rcEvent ) = 0;
 
 
 //========================================================================
@@ -72,7 +72,7 @@ clicks or releases
 	\param rcsEvent The SDL resize
 */
 	virtual void
-	Resize( const SDL_ResizeEvent& rcEvent )= 0;
+	Resize( const SDL_WindowEvent& rcEvent )= 0;
 
 };
 #endif
