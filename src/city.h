@@ -192,6 +192,7 @@ private:
 	GUIButton* _pbtnMenuLoad;		//               load button
 	GUIButton* _pbtnMenuSave;		//               save button
 	GUIButton* _pbtnMenuQuit;		//               quit button
+	GUIButton* _pbtnMenuOptions;		//           options button
 
 // The status bar
 	GUIContainer*	_pctrStatus;		///< The main status bar container
@@ -204,6 +205,7 @@ private:
 	GUIBar*			_pbarPower;			///< The power bar
 	GUIButton*		_pbtnPause;			///< Pause button
 	GUIButton*		_pbtnPlay;			///< Play button
+	GUIButton*		_pbtnPower;			///< Power button - status bar
 
 // GUI containers for main, zone, eLectric and Terrain toolcircles
 	GUIContainer* _pctr;

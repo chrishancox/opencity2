@@ -43,6 +43,7 @@
 
 	\author Duong-Khang NGUYEN (email: neoneurone gmail com)
 	\author Frédéric RODRIGO
+	\author Chris Hancox
 */
 
 // Useful enumerations
@@ -899,7 +900,7 @@ located in OpenCity executable directory.",
 static void printCopyright() {
 // Output the copyright text
 	cout << "Welcome to " << PACKAGE << "-" << ocStrVersion() << endl;
-	cout << "Copyright (C) by Duong Khang NGUYEN. All rights reserved." << endl;
+	cout << "Copyright (C) by Duong Khang NGUYEN. Further work by Chris Hancox. All rights reserved." << endl;
 	cout << "   web  : http://www.opencity.info" << endl;
 	cout << "   email: neoneurone @ gmail com" << endl << endl;
 

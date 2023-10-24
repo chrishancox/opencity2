@@ -133,8 +133,12 @@ _pctrMenu( NULL )
 
 	// Create the GUI
 		_CreateGUI();
+		_LoadMenu(); // to start with the menu
+
+
 	}
 }
+
 
 
    /*=====================================================================*/
@@ -1025,7 +1029,9 @@ City::_CreateGUI()
 // The status bar
 	_pbtnPause = new GUIButton( 54, 4, 24, 24, ocDataDirPrefix( "graphism/gui/status/speed_pause" ));
 	_pbtnPlay  = new GUIButton( 54, 4, 24, 24, ocDataDirPrefix( "graphism/gui/status/speed_play" ));
+	_pbtnPower  = new GUIButton( 10, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/power" ));
 	_pbtnPlay->Unset( OC_GUIMAIN_VISIBLE );
+
 
 	ossTemp << _liCityFund;
 	_plblFund = new GUILabel( 125, 11, 80, 10, ossTemp.str() );
@@ -1057,9 +1063,10 @@ City::_CreateGUI()
 	_pbarPower->SetForeground( OPENCITY_PALETTE[Color::OC_PINK] );
 
 	_pctrStatus =
-		new GUIContainer( (_iWinWidth-512)/2, 0, 512, 64, ocDataDirPrefix( "graphism/gui/main_status_bar.png" ) );
+		new GUIContainer( (_iWinWidth-512)/2, 0, 512, 128, ocDataDirPrefix( "graphism/gui/main_status_bar.png" ) );
 	_pctrStatus->Add( _pbtnPause );
 	_pctrStatus->Add( _pbtnPlay );
+	_pctrStatus->Add( _pbtnPower );
 	_pctrStatus->Add( _plblFund );
 	_pctrStatus->Add( _plblPopulation );
 	_pctrStatus->Add( _plblDate );
@@ -1079,8 +1086,8 @@ City::_CreateGUI()
 // GUI main toolcircle
 	pbtnZ = new GUIButton( GUIBUTTON_POSITION_1, ocDataDirPrefix( "graphism/gui/zone" ));
 	pbtnS = new GUIButton( GUIBUTTON_POSITION_5, ocDataDirPrefix( "graphism/gui/save" ));
-	pbtnL = new GUIButton( GUIBUTTON_POSITION_2, ocDataDirPrefix( "graphism/gui/power" ));
 	pbtnP = new GUIButton( GUIBUTTON_POSITION_3, ocDataDirPrefix( "graphism/gui/road" ));
+	pbtnL = new GUIButton( GUIBUTTON_POSITION_2, ocDataDirPrefix( "graphism/gui/power" ));
 	pbtnX = new GUIButton( GUIBUTTON_POSITION_4, ocDataDirPrefix( "graphism/gui/bulldozer" ));
 	pbtnG = new GUIButton( GUIBUTTON_POSITION_6, ocDataDirPrefix( "graphism/gui/government" ));
 
@@ -1272,6 +1279,7 @@ City::_DeleteGUI()
 	delete _plblPopulation;
 	delete _plblDate;
 	delete _pbtnPlay;
+	delete _pbtnPower;
 	delete _pbtnPause;
 
 // The status bar buttons
@@ -1290,6 +1298,7 @@ City::_LoadMenu()
 	_pbtnMenuLoad = new GUIButton( 0, 0, 128, 128, ocDataDirPrefix("graphism/gui/main_menu_load") );
 	_pbtnMenuSave = new GUIButton( 0, 0, 128, 128, ocDataDirPrefix("graphism/gui/main_menu_save") );
 	_pbtnMenuQuit = new GUIButton( 0, 0, 128, 128, ocDataDirPrefix("graphism/gui/main_menu_quit") );
+	_pbtnMenuOptions = new GUIButton( 0, 0, 64, 64, ocDataDirPrefix("graphism/gui/options") );
 
 	_pctrMenu = new GUIContainer(
 		0, 0, _iWinWidth, _iWinHeight, ocDataDirPrefix("graphism/gui/main_menu_bg.png")
@@ -1298,6 +1307,7 @@ City::_LoadMenu()
 	_pctrMenu->Add( _pbtnMenuLoad );
 	_pctrMenu->Add( _pbtnMenuSave );
 	_pctrMenu->Add( _pbtnMenuQuit );
+	_pctrMenu->Add( _pbtnMenuOptions );
 	_pctrMenu->Set( OC_GUIMAIN_VISIBLE );
 
 // Hide the status bar and the compass
@@ -1323,6 +1333,7 @@ City::_CenterMenu()
 	_pbtnMenuLoad->SetLocation( x-64, y );
 	_pbtnMenuSave->SetLocation( x+136, y );
 	_pbtnMenuQuit->SetLocation( _iWinWidth-150, 22 );
+	_pbtnMenuOptions->SetLocation( x+20, 22 );
 
 // Push the mouse motion event to activate the over state if necessary
 	SDL_Event event;
@@ -1347,6 +1358,7 @@ City::_UnloadMenu()
 	delete _pbtnMenuSave;
 	delete _pbtnMenuLoad;
 	delete _pbtnMenuNew;
+	delete _pbtnMenuOptions;
 
 	_pctrMenu = NULL;
 
@@ -1823,7 +1835,12 @@ City::_HandleStatusClick()
 			_eSpeed = OC_SPEED_NORMAL;
 			_pMSim->Run();
 			break;
+		case 3:		// Click on Power button
+			OPENCITY_DEBUG( "Open power tray" );
 
+			_pctr = _pctrL;
+			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
+			_pctr->Set( OC_GUIMAIN_VISIBLE );
 		default:
 			OPENCITY_DEBUG( "WARNING: What is this control -> " << uiObject);
 			//assert(0);
