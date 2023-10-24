@@ -206,6 +206,10 @@ private:
 	GUIButton*		_pbtnPause;			///< Pause button
 	GUIButton*		_pbtnPlay;			///< Play button
 	GUIButton*		_pbtnPower;			///< Power button - status bar
+	GUIButton*		_pbtnGov;			///< Power button - status bar
+	GUIButton*		_pbtnZone;			///< Power button - status bar
+	GUIButton*		_pbtnRoad;			///< Power button - status bar
+	
 
 // GUI containers for main, zone, eLectric and Terrain toolcircles
 	GUIContainer* _pctr;

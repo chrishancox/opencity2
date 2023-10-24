@@ -1030,6 +1030,9 @@ City::_CreateGUI()
 	_pbtnPause = new GUIButton( 54, 4, 24, 24, ocDataDirPrefix( "graphism/gui/status/speed_pause" ));
 	_pbtnPlay  = new GUIButton( 54, 4, 24, 24, ocDataDirPrefix( "graphism/gui/status/speed_play" ));
 	_pbtnPower  = new GUIButton( 10, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/power" ));
+	_pbtnGov  = new GUIButton( 60, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/government" ));
+	_pbtnZone  = new GUIButton( 110, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/zone" ));
+	_pbtnRoad  = new GUIButton( 160, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/road" ));
 	_pbtnPlay->Unset( OC_GUIMAIN_VISIBLE );
 
 
@@ -1067,6 +1070,9 @@ City::_CreateGUI()
 	_pctrStatus->Add( _pbtnPause );
 	_pctrStatus->Add( _pbtnPlay );
 	_pctrStatus->Add( _pbtnPower );
+	_pctrStatus->Add( _pbtnGov );
+	_pctrStatus->Add( _pbtnZone );
+	_pctrStatus->Add( _pbtnRoad );
 	_pctrStatus->Add( _plblFund );
 	_pctrStatus->Add( _plblPopulation );
 	_pctrStatus->Add( _plblDate );
@@ -1075,6 +1081,7 @@ City::_CreateGUI()
 	_pctrStatus->Add( _pbarIndustry );
 	_pctrStatus->Add( _pbarPower );
 	_pctrStatus->Set( OC_GUIMAIN_VISIBLE );
+	
 
 // The status bar buttons
 	for (int i = 0; i < OC_TOOL_NUMBER; i++) {
@@ -1281,6 +1288,9 @@ City::_DeleteGUI()
 	delete _pbtnPlay;
 	delete _pbtnPower;
 	delete _pbtnPause;
+	delete _pbtnGov;
+	delete _pbtnZone;
+	delete _pbtnRoad;
 
 // The status bar buttons
 	for (int i = 0; i < OC_TOOL_NUMBER; i++) {
@@ -1839,6 +1849,23 @@ City::_HandleStatusClick()
 			OPENCITY_DEBUG( "Open power tray" );
 
 			_pctr = _pctrL;
+			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
+			_pctr->Set( OC_GUIMAIN_VISIBLE );
+		case 4:		// Click on Government button
+			OPENCITY_DEBUG( "Open government tray" );
+
+			_pctr = _pctrG;
+			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
+			_pctr->Set( OC_GUIMAIN_VISIBLE );
+		case 5:		// Click on RCI button
+			OPENCITY_DEBUG( "Open RCI tray" );
+
+			_pctr = _pctrZ;
+			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
+			_pctr->Set( OC_GUIMAIN_VISIBLE );
+		case 6:		// Click on Road button
+			OPENCITY_DEBUG( "Open road tray" );
+			_pctr == _pctrPath;
 			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
 			_pctr->Set( OC_GUIMAIN_VISIBLE );
 		default:
