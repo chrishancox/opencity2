@@ -46,7 +46,7 @@ using namespace std;
 
 // Local defines
 #define OC_ACTION_FACTOR 10
-#define GUIBUTTON_POSITION_TOOL		85, 4, 24, 24
+#define GUIBUTTON_POSITION_TOOL		104, 4, 24, 24
 
 
    /*=====================================================================*/
@@ -862,9 +862,12 @@ void City::Resize( const SDL_WindowEvent& rcEvent )
 	_iWinHeight = rcEvent.data2;
 	gVars.gpRenderer->SetWinSize( _iWinWidth, _iWinHeight );
 
+
 // Resize the main status bar and reposition it
 	_pctrStatus->Resize( rcEvent );
 	_pctrStatus->SetLocation( (_iWinWidth-512)/2, 0 );
+	_pctrMain->SetLocation( (_iWinWidth-512)/2, 0 );
+	_pctr->SetLocation( ((_iWinWidth)/2-250), 128 );
 
 // Tell the containers about the event
 	_pctrMain->Resize( rcEvent );
@@ -1090,6 +1093,8 @@ City::_CreateGUI()
 	}
 	_apbtnCurrentTool[OC_TOOL_NONE]->Set( OC_GUIMAIN_VISIBLE );
 
+
+
 // GUI main toolcircle
 	pbtnZ = new GUIButton( GUIBUTTON_POSITION_1, ocDataDirPrefix( "graphism/gui/zone" ));
 	pbtnS = new GUIButton( GUIBUTTON_POSITION_5, ocDataDirPrefix( "graphism/gui/save" ));
@@ -1098,7 +1103,7 @@ City::_CreateGUI()
 	pbtnX = new GUIButton( GUIBUTTON_POSITION_4, ocDataDirPrefix( "graphism/gui/bulldozer" ));
 	pbtnG = new GUIButton( GUIBUTTON_POSITION_6, ocDataDirPrefix( "graphism/gui/government" ));
 
-	_pctrMain = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrMain = new GUIContainer( _iWinWidth/2-250, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrMain->Add( pbtnZ );
 	_pctrMain->Add( pbtnS );
 	_pctrMain->Add( pbtnL );
@@ -1113,7 +1118,7 @@ City::_CreateGUI()
 	pbtnZC = new GUIButton( GUIBUTTON_POSITION_3, ocDataDirPrefix( "graphism/gui/commercial" ));
 	pbtnZI = new GUIButton( GUIBUTTON_POSITION_4, ocDataDirPrefix( "graphism/gui/industrial" ));
 
-	_pctrZ = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrZ = new GUIContainer( _iWinWidth/2-250, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrZ->Add( pbtnZB );
 	_pctrZ->Add( pbtnZR );
 	_pctrZ->Add( pbtnZC );
@@ -1128,7 +1133,7 @@ City::_CreateGUI()
         pbtnLW = new GUIButton( GUIBUTTON_POSITION_6, ocDataDirPrefix( "graphism/gui/power_plant_wind" ));
         pbtnLO = new GUIButton( GUIBUTTON_POSITION_1, ocDataDirPrefix( "graphism/gui/power_plant_oil" ));
 
-	_pctrL = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrL = new GUIContainer( _iWinWidth/2-250, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrL->Add( pbtnLB );
 	_pctrL->Add( pbtnLL );
 	_pctrL->Add( pbtnLN );
@@ -1143,7 +1148,7 @@ City::_CreateGUI()
 	pbtnTX = new GUIButton( GUIBUTTON_POSITION_1, ocDataDirPrefix( "graphism/gui/destroy" ));
 	pbtnTQ = new GUIButton( GUIBUTTON_POSITION_5, ocDataDirPrefix( "graphism/gui/query" ));
 
-	_pctrT = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrT = new GUIContainer( _iWinWidth/2-250, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrT->Add( pbtnTB );
 	_pctrT->Add( pbtnTU );
 	_pctrT->Add( pbtnTD );
@@ -1159,7 +1164,7 @@ City::_CreateGUI()
 	pbtnGL = new GUIButton( GUIBUTTON_POSITION_3, ocDataDirPrefix( "graphism/gui/police" ));
 	pbtnGF = new GUIButton( GUIBUTTON_POSITION_4, ocDataDirPrefix( "graphism/gui/fire" ));
 
-	_pctrG = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrG = new GUIContainer( _iWinWidth/2-210, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrG->Add( pbtnGB );
 	_pctrG->Add( pbtnGP );
 	_pctrG->Add( pbtnGE );
@@ -1173,7 +1178,7 @@ City::_CreateGUI()
 	pbtnNP = new GUIButton( GUIBUTTON_POSITION_6, ocDataDirPrefix( "graphism/gui/park_city" ));
 	pbtnNT = new GUIButton( GUIBUTTON_POSITION_5, ocDataDirPrefix( "graphism/gui/tree" ));
 
-	_pctrN = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrN = new GUIContainer( _iWinWidth/2-250, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrN->Add( pbtnNB );
 	_pctrN->Add( pbtnNP );
 	_pctrN->Add( pbtnNT );
@@ -1184,7 +1189,7 @@ City::_CreateGUI()
 	pbtnSS = new GUIButton( GUIBUTTON_POSITION_6, ocDataDirPrefix( "graphism/gui/save_save" ));
 	pbtnSB = new GUIButton( GUIBUTTON_POSITION_5, ocDataDirPrefix( "graphism/gui/back" ));
 
-	_pctrS = new GUIContainer( 100, 100, 140, 140, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
+	_pctrS = new GUIContainer( _iWinWidth/2-250, 128, 50, 300, ocDataDirPrefix( "graphism/gui/toolcircle_bg.png" ) );
 	_pctrS->Add( pbtnSB );
 	_pctrS->Add( pbtnSS );
 	_pctrS->Add( pbtnSL );
@@ -1344,6 +1349,7 @@ City::_CenterMenu()
 	_pbtnMenuSave->SetLocation( x+136, y );
 	_pbtnMenuQuit->SetLocation( _iWinWidth-150, 22 );
 	_pbtnMenuOptions->SetLocation( x+20, 22 );
+
 
 // Push the mouse motion event to activate the over state if necessary
 	SDL_Event event;
@@ -1847,34 +1853,36 @@ City::_HandleStatusClick()
 			break;
 		case 3:		// Click on Power button
 			OPENCITY_DEBUG( "Open power tray" );
-
 			_pctr = _pctrL;
+			_pctr->SetLocation( (_iWinWidth/2-250), 128 );
 			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
 			_pctr->Set( OC_GUIMAIN_VISIBLE );
+			break;
 		case 4:		// Click on Government button
 			OPENCITY_DEBUG( "Open government tray" );
-
 			_pctr = _pctrG;
+			_pctr->SetLocation( (_iWinWidth/2-200), 128 );
 			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
 			_pctr->Set( OC_GUIMAIN_VISIBLE );
+			break;
 		case 5:		// Click on RCI button
 			OPENCITY_DEBUG( "Open RCI tray" );
-
 			_pctr = _pctrZ;
+			_pctr->SetLocation( (_iWinWidth/2-150), 128 );
 			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
 			_pctr->Set( OC_GUIMAIN_VISIBLE );
+			break;
 		case 6:		// Click on Road button
 			OPENCITY_DEBUG( "Open road tray" );
-			_pctr == _pctrPath;
-			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
-			_pctr->Set( OC_GUIMAIN_VISIBLE );
+			_SetCurrentTool( OC_TOOL_ROAD );			_pctr->Unset( OC_GUIMAIN_VISIBLE );
+			break;
 		default:
 			OPENCITY_DEBUG( "WARNING: What is this control -> " << uiObject);
 			//assert(0);
 			break;
 	} // switch
 
-	_pctrStatus->ResetAttribute( OC_GUIMAIN_CLICKED /*| OC_GUIMAIN_MOUSEOVER*/ );
+	_pctrStatus->ResetAttribute( OC_GUIMAIN_CLICKED | OC_GUIMAIN_MOUSEOVER );
 }
 
 
@@ -1951,7 +1959,7 @@ City::_HandleGUIClick()
 		case 1: // back button, open the main toolcircle
 			_pctr = _pctrMain;
 		// highlight the previous button under the mouse cursor
-			_pctr->Set( 3, OC_GUIMAIN_MOUSEOVER );
+
 			break;
 		case 2:  // L button, set tool for building electric lines
 			_SetCurrentTool( OC_TOOL_ELINE );
