@@ -1036,6 +1036,7 @@ City::_CreateGUI()
 	_pbtnGov  = new GUIButton( 60, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/government" ));
 	_pbtnZone  = new GUIButton( 110, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/zone" ));
 	_pbtnRoad  = new GUIButton( 160, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/road" ));
+	_pbtnRaiseLower  = new GUIButton( 210, 70, 48, 48,  ocDataDirPrefix( "graphism/gui/raise" ));
 	_pbtnPlay->Unset( OC_GUIMAIN_VISIBLE );
 
 
@@ -1076,6 +1077,8 @@ City::_CreateGUI()
 	_pctrStatus->Add( _pbtnGov );
 	_pctrStatus->Add( _pbtnZone );
 	_pctrStatus->Add( _pbtnRoad );
+	_pctrStatus->Add( _pbtnRaiseLower );
+
 	_pctrStatus->Add( _plblFund );
 	_pctrStatus->Add( _plblPopulation );
 	_pctrStatus->Add( _plblDate );
@@ -1296,6 +1299,8 @@ City::_DeleteGUI()
 	delete _pbtnGov;
 	delete _pbtnZone;
 	delete _pbtnRoad;
+	delete _pbtnRaiseLower;
+
 
 // The status bar buttons
 	for (int i = 0; i < OC_TOOL_NUMBER; i++) {
@@ -1875,7 +1880,13 @@ City::_HandleStatusClick()
 		case 6:		// Click on Road button
 			OPENCITY_DEBUG( "Open road tray" );
 			_SetCurrentTool( OC_TOOL_ROAD );			_pctr->Unset( OC_GUIMAIN_VISIBLE );
-
+			break;
+		case 7:		// Click on Raise Lower button
+			OPENCITY_DEBUG( "Open Raise/Lower tray" );
+			_pctr = _pctrT;
+			_pctr->SetLocation( (_iWinWidth/2-50), 128 );
+			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
+			_pctr->Set( OC_GUIMAIN_VISIBLE );
 			break;
 		default:
 			OPENCITY_DEBUG( "WARNING: What is this control -> " << uiObject);
@@ -1935,8 +1946,8 @@ City::_HandleGUIClick()
 	else if (_pctr == _pctrZ )
 	switch (uiObject) {
 		case 1: // back button, open the main toolcircle
-			_pctr = _pctrMain;
-			_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
+			//_pctr = _pctrMain;
+			//_pctr->Set( 1, OC_GUIMAIN_MOUSEOVER );
 			break;
 		case 2: // R button
 			_SetCurrentTool( OC_TOOL_ZONE_RES );
@@ -1958,7 +1969,7 @@ City::_HandleGUIClick()
 	else if (_pctr == _pctrL)
 	switch (uiObject) {
 		case 1: // back button, open the main toolcircle
-			_pctr = _pctrMain;
+			//_pctr = _pctrMain;
 		// highlight the previous button under the mouse cursor
 
 			break;
@@ -1988,8 +1999,8 @@ City::_HandleGUIClick()
 	else if (_pctr == _pctrT)
 	switch (uiObject) {
 		case 1: // back button, open the main toolcircle
-			_pctr = _pctrMain;
-			_pctr->Set( 5, OC_GUIMAIN_MOUSEOVER );
+			//_pctr = _pctrMain;
+			//_pctr->Set( 5, OC_GUIMAIN_MOUSEOVER );
 			break;
 		case 2:  // height up
 			_SetCurrentTool( OC_TOOL_HEIGHT_UP );
@@ -2014,8 +2025,8 @@ City::_HandleGUIClick()
 	else if (_pctr == _pctrG)
 	switch (uiObject) {
 		case 1: // back button, open the main toolcircle
-			_pctr = _pctrMain;
-			_pctr->Set( 6, OC_GUIMAIN_MOUSEOVER );
+			//_pctr = _pctrMain;
+			//_pctr->Set( 6, OC_GUIMAIN_MOUSEOVER );
 			break;
 		case 2:  // nature toolcircle
 			_pctr = _pctrN;
@@ -2044,8 +2055,8 @@ City::_HandleGUIClick()
 	else if (_pctr == _pctrN)
 	switch (uiObject) {
 		case 1: // back button, open the government toolcircle
-			_pctr = _pctrG;
-			_pctr->Set( 2, OC_GUIMAIN_MOUSEOVER );
+			//_pctr = _pctrG;
+			//_pctr->Set( 2, OC_GUIMAIN_MOUSEOVER );
 			break;
 		case 2:  // build park
 			_SetCurrentTool( OC_TOOL_PARK );
@@ -2064,8 +2075,8 @@ City::_HandleGUIClick()
 	else if (_pctr == _pctrS)
 	switch (uiObject) {
 		case 1: // back button, open the main toolcircle
-			_pctr = _pctrMain;
-			_pctr->Set( 2, OC_GUIMAIN_MOUSEOVER );
+			//_pctr = _pctrMain;
+			//_pctr->Set( 2, OC_GUIMAIN_MOUSEOVER );
 			break;
 		case 2:  // save
 			_Save( ocSaveDirPrefix( "opencity.save" ) );
