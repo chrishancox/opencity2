@@ -403,7 +403,7 @@ cityrun_swap:
 		_pctrMenu->Display();
 
 // Swap the buffers and update the screen
-   SDL_GL_SwapWindow(_pWindow);
+   //SDL_GL_SwapWindow(_pWindow); - Causes issues on modern AMD cards (flickering), bt not software renderer.
 }
 
 
@@ -606,7 +606,7 @@ void City::Keyboard( const SDL_KeyboardEvent& rcEvent )
 
 #ifndef NDEBUG
 	// Testing PathFinder
-		case SDLK_a:
+		case /*SDL*/K_a:
 			_pctr->ResetAttribute( OC_GUIMAIN_CLICKED | OC_GUIMAIN_MOUSEOVER );
 
 		// Toggle Main <-> Pathfinding toolcircle
@@ -749,7 +749,7 @@ City::MouseButton( const SDL_MouseButtonEvent& rcsMBE )
 				_bLMBPressed = true;
 			} //if
 //debug begin
-//SDL_GL_SwapBuffers(); // uncomment this if you want to know how it works
+//SDL_GL_SwapWindow(_pWindow); // uncomment this if you want to know how it works
 //SDL_Delay( 500 );
 //debug end
 
@@ -847,8 +847,8 @@ City::Expose( const SDL_WindowEvent& rcEvent )
 	if (_pctrMenu != NULL) {
 		_pctrMenu->Expose( rcEvent );
 	}
-
-	SDL_GL_SwapWindow(_pWindow);
+//SDL_GL_SetSwapInterval(1);
+//SDL_GL_SwapWindow(_pWindow);
 }
 
 
@@ -1875,6 +1875,7 @@ City::_HandleStatusClick()
 		case 6:		// Click on Road button
 			OPENCITY_DEBUG( "Open road tray" );
 			_SetCurrentTool( OC_TOOL_ROAD );			_pctr->Unset( OC_GUIMAIN_VISIBLE );
+
 			break;
 		default:
 			OPENCITY_DEBUG( "WARNING: What is this control -> " << uiObject);
