@@ -753,8 +753,8 @@ City::MouseButton( const SDL_MouseButtonEvent& rcsMBE )
 //SDL_Delay( 500 );
 //debug end
 
-		// RMB (right mouse button) close/open the toolcircle
-			if (rcsMBE.button == SDL_BUTTON_RIGHT) {
+		// RMB (right mouse button) close/open the toolcircle - NO LONGER USED SINCE WE HAVE THE BOTTOM MENU BAR
+			/*if (rcsMBE.button == SDL_BUTTON_RIGHT) {
 			// IF the user has invoked "Query" THEN we destroy it first
 				if (_pctr == _pctrQ) {
 					_pctr = _pctrMain;
@@ -770,7 +770,7 @@ City::MouseButton( const SDL_MouseButtonEvent& rcsMBE )
 					_pctr->SetLocation( rcsMBE.x - 70, _iWinHeight - rcsMBE.y - 70 );
 					_pctr->Set( OC_GUIMAIN_VISIBLE );
 				}
-			}
+			} */
 
 		// Wheel button forward
 			if (rcsMBE.button == 4) {
