@@ -3,8 +3,7 @@
 # $Id: autogen.sh 465 2014-04-18 17:20:32Z neoneurone $
 
 aclocal
-libtoolize -c
+libtoolize
 autoconf
 autoheader
-automake -a -c
-
+automake
